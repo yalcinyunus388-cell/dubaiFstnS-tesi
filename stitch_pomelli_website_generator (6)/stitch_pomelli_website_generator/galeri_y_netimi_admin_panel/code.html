@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Medya ve Ürün Girişi | Dubai Fistan Admin</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { "antique-gold": "#C5A059", "deep-obsidian": "#0A0A0A", "surface": "#131313", "on-surface": "#e2e2e2" },
+                    fontFamily: { "headline": ["Libre Caslon Text"], "body": ["Manrope"] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        body { background-color: #070707; color: #e2e2e2; font-family: 'Manrope', sans-serif; }
+        .sidebar-item { display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 12px; color: #d1c5b4; transition: all 0.3s; text-transform: uppercase; font-size: 13px; font-weight: 500; }
+        .sidebar-item:hover { background: rgba(197, 160, 89, 0.1); color: #fff; }
+        .sidebar-item.active { background: linear-gradient(90deg, rgba(197, 160, 89, 0.2) 0%, rgba(197, 160, 89, 0) 100%); color: #e9c176; border-left: 3px solid #C5A059; border-radius: 0 12px 12px 0; }
+        .bento-card { background: #111111; border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 24px; }
+        .glass-input { background: #1a1a1a !important; border: 1px solid rgba(255, 255, 255, 0.05) !important; border-radius: 8px; color: #fff !important; padding: 8px 12px; width: 100%; outline: none; font-size: 12px; }
+        .glass-input:focus { border-color: #C5A059 !important; }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 10px; }
+    </style>
+</head>
+<body class="h-screen overflow-hidden">
+    <div class="flex h-full w-full">
+        <!-- Sidebar -->
+        <aside class="w-72 bg-[#0a0a0a] border-r border-white/5 flex flex-col p-6">
+            <div class="flex items-center gap-3 mb-10 px-2">
+                <div class="w-10 h-10 bg-antique-gold rounded-xl flex items-center justify-center"><span class="material-symbols-outlined text-black font-bold">diamond</span></div>
+                <div><h1 class="font-headline text-lg text-antique-gold leading-none">DUBAI FISTAN</h1><p class="text-[10px] text-white/40 uppercase mt-1">Admin Panel</p></div>
+            </div>
+            <nav class="flex-1 space-y-1 overflow-y-auto pr-2 scrollbar-hide">
+                <a href="../dubai_fistan_saray_b_t_nle_ik_proje_merkezi/code.html" class="sidebar-item"><span class="material-symbols-outlined">grid_view</span> DASHBOARD</a>
+                <a href="../r_n_ve_kuma_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">texture</span> KUMAŞLAR</a>
+                <a href="../elbise_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">apparel</span> ELBİSELER</a>
+                <a href="../sipari_ve_zel_dikim_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">shopping_bag</span> SİPARİŞLER</a>
+                <a href="../olcu_talepleri_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">straighten</span> ÖLÇÜ TALEPLERİ</a>
+                <a href="code.html" class="sidebar-item active"><span class="material-symbols-outlined">photo_library</span> GALERİ</a>
+                <a href="../instagram_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">camera</span> INSTAGRAM</a>
+                <a href="../whatsapp_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">chat</span> WHATSAPP</a>
+                <a href="../kategori_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">category</span> KATEGORİLER</a>
+                <a href="../sayfa_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">auto_stories</span> SAYFALAR</a>
+                <a href="../y_netim_paneli_site_ayarlar_ve_tam_kontrol_merkezi/code.html" class="sidebar-item"><span class="material-symbols-outlined">settings</span> SİTE AYARLARI</a>
+                <a href="../kullanici_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">group</span> KULLANICILAR</a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 flex flex-col min-w-0 bg-[#070707] relative overflow-hidden">
+            <header class="h-24 flex items-center justify-between px-10 border-b border-white/5 bg-[#070707]/80">
+                <h2 class="font-headline text-3xl text-white uppercase tracking-tighter">Medya & Ürün Girişi</h2>
+                <div class="flex gap-4">
+                    <input type="file" id="bulkInput" multiple accept="image/*" class="hidden">
+                    <button onclick="startBulkUpload('fabrics')" class="px-6 py-3 bg-white/5 border border-white/10 text-white text-[10px] font-bold uppercase rounded-xl hover:bg-antique-gold hover:text-black transition-all">TOPLU KUMAŞ YÜKLE</button>
+                    <button onclick="startBulkUpload('dresses')" class="px-6 py-3 bg-antique-gold text-black font-bold text-[10px] uppercase rounded-xl shadow-lg">TOPLU ELBİSE YÜKLE</button>
+                </div>
+            </header>
+
+            <div class="flex-1 overflow-y-auto p-10 space-y-10 scrollbar-hide">
+                <!-- Bulk Editing Zone -->
+                <section id="bulkZone" class="hidden bento-card border-2 border-antique-gold/30">
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="font-headline text-2xl text-antique-gold uppercase" id="uploadTitle">Yükleme Listesi</h3>
+                        <div class="flex gap-3">
+                            <button onclick="processAll()" class="bg-emerald-500 text-black font-bold text-xs px-8 py-3 rounded-lg">TÜMÜNÜ SİSTEME İŞLE</button>
+                            <button onclick="cancelBulk()" class="text-white/40 text-xs px-4">İPTAL</button>
+                        </div>
+                    </div>
+                    <div id="bulkList" class="space-y-4">
+                        <!-- Uploaded items with inputs will appear here -->
+                    </div>
+                </section>
+
+                <!-- Current Library View -->
+                <section>
+                    <h3 class="text-white/20 text-[10px] uppercase font-bold tracking-[0.3em] mb-6">YÜKLÜ MEDYA KÜTÜPHANESİ</h3>
+                    <div id="mainGallery" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                        <!-- Loaded from all products -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let categories = JSON.parse(localStorage.getItem('dubai_categories')) || ["Premium Kumaşlar", "Hazır Giyim"];
+        let currentUploadType = "";
+        let pendingItems = [];
+
+        function startBulkUpload(type) {
+            currentUploadType = type;
+            document.getElementById('uploadTitle').innerText = type === 'fabrics' ? "TOPLU KUMAŞ GİRİŞİ" : "TOPLU ELBİSE GİRİŞİ";
+            document.getElementById('bulkInput').click();
+        }
+
+        document.getElementById('bulkInput').addEventListener('change', function(e) {
+            const files = Array.from(e.target.files);
+            document.getElementById('bulkZone').classList.remove('hidden');
+
+            files.forEach((file, index) => {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const id = Date.now() + index;
+                    const itemHtml = `
+                        <div id="item-${id}" class="flex gap-6 p-4 bg-white/5 rounded-xl border border-white/5 items-center">
+                            <img src="${event.target.result}" class="w-20 h-24 object-cover rounded-lg border border-white/10">
+                            <div class="flex-1 grid grid-cols-4 gap-4">
+                                <input type="text" placeholder="Ürün Adı" class="glass-input item-name">
+                                <select class="glass-input item-cat">${categories.map(c => `<option>${c}</option>`).join('')}</select>
+                                <input type="number" placeholder="${currentUploadType==='fabrics'?'Stok (m)':'Fiyat (₺)'}" class="glass-input item-val">
+                                <input type="text" placeholder="Kısa Açıklama" class="glass-input item-desc">
+                            </div>
+                            <button onclick="this.parentElement.remove()" class="text-white/20 hover:text-error"><span class="material-symbols-outlined">delete</span></button>
+                        </div>
+                    `;
+                    document.getElementById('bulkList').insertAdjacentHTML('beforeend', itemHtml);
+                    pendingItems.push({ id, img: event.target.result });
+                };
+                reader.readAsDataURL(file);
+            });
+        });
+
+        function processAll() {
+            const storageKey = currentUploadType === 'fabrics' ? 'dubai_fabrics' : 'dubai_dresses';
+            let currentData = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+            const rows = document.querySelectorAll('#bulkList > div');
+            rows.forEach(row => {
+                const img = row.querySelector('img').src;
+                const name = row.querySelector('.item-name').value || "İsimsiz Ürün";
+                const cat = row.querySelector('.item-cat').value;
+                const val = row.querySelector('.item-val').value || 0;
+                const desc = row.querySelector('.item-desc').value;
+
+                const newItem = { name, cat, img, desc };
+                if(currentUploadType === 'fabrics') newItem.stock = val;
+                else newItem.price = val;
+
+                currentData.unshift(newItem);
+            });
+
+            localStorage.setItem(storageKey, JSON.stringify(currentData));
+            alert('Tüm ürünler başarıyla ilgili bölümlere aktarıldı.');
+            location.reload();
+        }
+
+        function cancelBulk() {
+            if(confirm('Yüklemeyi iptal etmek istiyor musunuz?')) location.reload();
+        }
+
+        function renderLibrary() {
+            const fabs = JSON.parse(localStorage.getItem('dubai_fabrics')) || [];
+            const dresses = JSON.parse(localStorage.getItem('dubai_dresses')) || [];
+            const all = [...fabs, ...dresses];
+
+            document.getElementById('mainGallery').innerHTML = all.map(item => `
+                <div class="aspect-square rounded-xl overflow-hidden border border-white/5 bg-white/5 opacity-60 hover:opacity-100 transition-all">
+                    <img src="${item.img}" class="w-full h-full object-cover">
+                </div>
+            `).join('');
+        }
+
+        renderLibrary();
+    </script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html><html class="dark" lang="tr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Dubai Fistan Sarayı - Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#e9c176",
+                    "surface-container-low": "#1b1b1b",
+                    "primary": "#e9c176",
+                    "on-tertiary": "#432c01",
+                    "tertiary-container": "#c3a06a",
+                    "on-primary-container": "#4e3700",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "muted-gold": "#8E6F3E",
+                    "on-primary-fixed": "#261900",
+                    "on-secondary-container": "#b7b5b4",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-error": "#690005",
+                    "surface-container-highest": "#353535",
+                    "tertiary-fixed-dim": "#e7c188",
+                    "on-tertiary-container": "#4f370a",
+                    "tertiary-fixed": "#ffdeae",
+                    "on-surface": "#e2e2e2",
+                    "outline-variant": "#4e4639",
+                    "error": "#ffb4ab",
+                    "outline": "#9a8f80",
+                    "inverse-primary": "#775a19",
+                    "surface-tint": "#e9c176",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary": "#c8c6c5",
+                    "inverse-on-surface": "#303030",
+                    "on-tertiary-fixed": "#281800",
+                    "surface-variant": "#353535",
+                    "background": "#131313",
+                    "on-primary-fixed-variant": "#5d4201",
+                    "primary-container": "#c5a059",
+                    "secondary-container": "#474746",
+                    "surface-dim": "#131313",
+                    "primary-fixed": "#ffdea5",
+                    "surface-container": "#1f1f1f",
+                    "on-secondary": "#313030",
+                    "on-background": "#e2e2e2",
+                    "on-error-container": "#ffdad6",
+                    "surface-bright": "#393939",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-fixed-variant": "#5c4215",
+                    "inverse-surface": "#e2e2e2",
+                    "surface": "#131313",
+                    "tertiary": "#e7c188",
+                    "on-primary": "#412d00",
+                    "antique-gold": "#C5A059",
+                    "silk-white": "#F4F4F4",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "deep-obsidian": "#0A0A0A",
+                    "error-container": "#93000a",
+                    "on-surface-variant": "#d1c5b4",
+                    "on-secondary-fixed-variant": "#474746"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "80px",
+                    "container-max": "1440px",
+                    "gutter-desktop": "32px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Manrope"],
+                    "headline-lg-mobile": ["Libre Caslon Text"],
+                    "body-md": ["Manrope"],
+                    "display-lg": ["Libre Caslon Text"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "title-lg": ["Manrope"],
+                    "headline-md": ["Libre Caslon Text"],
+                    "label-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
+                    "title-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #0A0A0A;
+            color: #e2e2e2;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .glass-card {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-drawer-active {
+            color: #C5A059;
+            background: rgba(197, 160, 89, 0.05);
+        }
+        .scroll-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-antique-gold/30">
+<!-- Mobile Top Bar -->
+<header class="fixed top-0 inset-x-0 z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30 px-margin-mobile py-4 flex justify-between items-center h-16">
+<button class="p-2 text-antique-gold active:scale-95 transition-transform" id="drawer-toggle">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+<span class="font-headline-md text-title-lg tracking-widest text-antique-gold">DUBAI FISTAN SARAYI</span>
+<div class="flex items-center gap-3">
+<button class="relative p-2 text-antique-gold">
+<span class="material-symbols-outlined text-[24px]">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+</div>
+</header>
+<!-- Side Navigation Drawer (Overlay) -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-300" id="nav-overlay"></div>
+<aside class="fixed top-0 left-0 h-full w-4/5 max-w-[320px] bg-surface-container-lowest z-[70] transform -translate-x-full transition-transform duration-300 border-r border-outline-variant/20 shadow-2xl" id="nav-drawer">
+<div class="p-margin-mobile h-full flex flex-col">
+<div class="flex justify-between items-center mb-10">
+<span class="font-headline-md text-headline-md text-antique-gold">MENÜ</span>
+<button class="p-2 text-on-surface-variant" id="drawer-close">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex-grow space-y-2">
+<a class="flex items-center gap-4 p-4 rounded-lg nav-drawer-active font-label-md text-label-md uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                    Panel
+                </a>
+<a class="flex items-center gap-4 p-4 rounded-lg text-on-surface-variant font-label-md text-label-md uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+                    Siparişler
+                </a>
+<a class="flex items-center gap-4 p-4 rounded-lg text-on-surface-variant font-label-md text-label-md uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined">straighten</span>
+                    Ölçüler
+                </a>
+<a class="flex items-center gap-4 p-4 rounded-lg text-on-surface-variant font-label-md text-label-md uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined">palette</span>
+                    Kumaşlar
+                </a>
+<a class="flex items-center gap-4 p-4 rounded-lg text-on-surface-variant font-label-md text-label-md uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined">analytics</span>
+                    Raporlar
+                </a>
+<a class="flex items-center gap-4 p-4 rounded-lg text-on-surface-variant font-label-md text-label-md uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Ayarlar
+                </a>
+</nav>
+<div class="mt-auto pt-6 border-t border-outline-variant/20 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-antique-gold/20 flex items-center justify-center border border-antique-gold/30">
+<span class="material-symbols-outlined text-antique-gold">person</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface uppercase text-xs">Yönetici Paneli</p>
+<p class="text-on-surface-variant text-xs">Ahmad Al-Mansour</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-12 px-margin-mobile">
+<!-- Welcome Header -->
+<section class="mb-8">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-antique-gold mb-1">Günün Özeti</h1>
+<p class="text-on-surface-variant font-label-md text-xs uppercase tracking-widest">Atölye Durumu: Aktif</p>
+</section>
+<!-- Glassmorphic Stats Grid -->
+<section class="grid grid-cols-2 gap-4 mb-8">
+<div class="glass-card p-5 flex flex-col justify-between h-32 relative overflow-hidden group">
+
+<span class="material-symbols-outlined text-antique-gold">payments</span>
+<div>
+<p class="text-on-surface-variant text-[10px] font-label-md uppercase tracking-tighter">Gelir (Bugün)</p>
+<p class="font-headline-md text-title-lg text-white">₺42.500</p>
+</div>
+</div>
+<div class="glass-card p-5 flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-antique-gold">shopping_cart</span>
+<div>
+<p class="text-on-surface-variant text-[10px] font-label-md uppercase tracking-tighter">Siparişler</p>
+<p class="font-headline-md text-title-lg text-white">12 Adet</p>
+</div>
+</div>
+<div class="glass-card p-5 flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-antique-gold">straighten</span>
+<div>
+<p class="text-on-surface-variant text-[10px] font-label-md uppercase tracking-tighter">Ölçüm Bekleyen</p>
+<p class="font-headline-md text-title-lg text-white">4 Müşteri</p>
+</div>
+</div>
+<div class="glass-card p-5 flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-antique-gold">diamond</span>
+<div>
+<p class="text-on-surface-variant text-[10px] font-label-md uppercase tracking-tighter">Atölye Doluluğu</p>
+<p class="font-headline-md text-title-lg text-white">%85</p>
+</div>
+</div>
+</section>
+<!-- Quick Action Row -->
+<section class="mb-10">
+<div class="flex gap-4 overflow-x-auto scroll-hide pb-2">
+<button class="flex-shrink-0 flex items-center gap-2 bg-antique-gold text-deep-obsidian px-6 py-3 rounded-full font-label-md text-xs uppercase tracking-wider active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">add_circle</span> Yeni Sipariş
+                </button>
+<button class="flex-shrink-0 flex items-center gap-2 border border-antique-gold text-antique-gold px-6 py-3 rounded-full font-label-md text-xs uppercase tracking-wider active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">schedule</span> Randevu
+                </button>
+<button class="flex-shrink-0 flex items-center gap-2 border border-outline-variant/30 text-on-surface-variant px-6 py-3 rounded-full font-label-md text-xs uppercase tracking-wider active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">print</span> Rapor Al
+                </button>
+</div>
+</section>
+<!-- Recent Activity / Orders -->
+<section>
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-headline-md text-title-lg text-white">Son Siparişler</h2>
+<a class="text-antique-gold text-xs font-label-md border-b border-antique-gold pb-1" href="#">TÜMÜNÜ GÖR</a>
+</div>
+<div class="space-y-4">
+<!-- Order Item 1 -->
+<div class="glass-card p-4 flex items-center gap-4">
+<div class="w-14 h-14 bg-surface-container-high overflow-hidden border border-outline-variant/20 rounded">
+<img class="w-full h-full object-cover" data-alt="Close-up macro photography of heavy, luxury emerald green silk fabric with intricate golden embroidery details, captured in low moody studio lighting with cinematic shadows. The texture of the weaving and the metallic sheen of the gold threads are highly visible, reflecting a premium haute couture aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtFleDBpAZjDl8yxfIJzwAZmPAmeIG-gCa7Vdcn2GOhOSMCkrgvxFACtqZdJoW9-xSPOLEflCM4L0EaYGH6YNWh5QIWpeYG0YUOtolJMR5QLtnOIonRomSzNPAWAksVAqHhpxm-BawLFuXC9dOX5ihElysNKeFogylo2KM3twPt-fz5WVsDJm9HX9F8iicdZTVCOrBeVFdP7YZpBdIKpt_FidCk8Kao5cTjiSSSMSbhyuBFoi3VLuUT5WgjAdktYPaND2HiBvBOQ">
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-title-lg text-[15px] text-on-surface leading-none">A. Rashid</h3>
+<span class="text-[10px] font-label-md text-primary bg-primary/10 px-2 py-0.5 rounded uppercase tracking-tighter">DİKİMDE</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-1">Özel Dikim Kaftan - İpek</p>
+<p class="text-xs font-bold text-antique-gold leading-none">₺18.200</p>
+</div>
+<button class="p-2 text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Order Item 2 -->
+<div class="glass-card p-4 flex items-center gap-4">
+<div class="w-14 h-14 bg-surface-container-high overflow-hidden border border-outline-variant/20 rounded">
+<img class="w-full h-full object-cover" data-alt="A portrait-style macro shot of high-end white bridal fabric featuring delicate pearl beadwork and subtle shimmer patterns. The lighting is soft and ethereal, mimicking the interior of a luxury wedding atelier. Shallow depth of field highlights the meticulous hand-stitched craftsmanship and the opulence of the material." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxpp70tU-XxT4skebo-RrQfKZq0j7wWxNw7mLR7aCtBd6pM9xox4OOsCR2WOdtKxd8RctasogaEjuihg9aF_EnQjZ2sFP1lxsT43ISR07uHQzxKEtxG1McVudmUhz_98I7Kvd4T0Kw2_VPj0L06GqQahkPHhEN3U5Rrt4cpfrAj-uW9gqKfTLNHF_Wc7QpQcdg7f4NI9Y6TkiIwxAvIn11nircRkiumTfwq24UrjQUFXNNf3ysSi5AukHPyAs9ua00Jzuy1_ITwA">
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-title-lg text-[15px] text-on-surface leading-none">M. Yıldız</h3>
+<span class="text-[10px] font-label-md text-on-surface-variant bg-surface-variant px-2 py-0.5 rounded uppercase tracking-tighter">BEKLEMEDE</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-1">Hazır Giyim - Gelinlik</p>
+<p class="text-xs font-bold text-antique-gold leading-none">₺32.000</p>
+</div>
+<button class="p-2 text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Order Item 3 -->
+<div class="glass-card p-4 flex items-center gap-4">
+<div class="w-14 h-14 bg-surface-container-high overflow-hidden border border-outline-variant/20 rounded">
+<img class="w-full h-full object-cover" data-alt="Overhead flat lay of dark navy velvet fabric with silver sequin embellishments arranged in geometric arabesque patterns. The surface catches small glimmers of light against a deep obsidian background. The composition emphasizes luxury, night-time elegance, and high-fashion evening wear textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM6UoyZj9bbAZHU9E7d-f47Ha5IMAGIsAnlRJ1h6YTrv2Fth0g_smgA5v9lKCphX7b8MYDdwNjYFWevRvYSOH82pMgH43FL832P-dn4-EVBctkOJkXNaqvuBuOIYULWiQyRw4vx88TqYacOBiikrLaTI7d-e3X76M1DVPDtz6jX1TPDba3a0X3zRUJWNvx5sQjNHpQ0ZSlbUZ1xjuFwAF90RYKKe3WZmGunxVOLuszLAC3LBdo7_tbo2IwxIwhTVBgvaPsmqXANw">
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-1">
+<h3 class="font-title-lg text-[15px] text-on-surface leading-none">S. Al-Fayez</h3>
+<span class="text-[10px] font-label-md text-error bg-error/10 px-2 py-0.5 rounded uppercase tracking-tighter">ACİL</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-1">Abiye - Gece Elbisesi</p>
+<p class="text-xs font-bold text-antique-gold leading-none">₺12.400</p>
+</div>
+<button class="p-2 text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Quick Measurement View -->
+<section class="mt-12">
+<div class="glass-card rounded-xl p-6 border-antique-gold/30 relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline-md text-title-lg text-antique-gold mb-2">Hızlı Ölçü Takibi</h2>
+<p class="text-xs text-on-surface-variant mb-6 uppercase tracking-widest">Bugün Ölçü Veren: 4 Müşteri</p>
+<div class="flex -space-x-3 mb-6">
+<div class="w-10 h-10 rounded-full border-2 border-deep-obsidian bg-muted-gold flex items-center justify-center text-xs font-bold">JD</div>
+<div class="w-10 h-10 rounded-full border-2 border-deep-obsidian bg-antique-gold flex items-center justify-center text-xs font-bold">KA</div>
+<div class="w-10 h-10 rounded-full border-2 border-deep-obsidian bg-tertiary flex items-center justify-center text-xs font-bold">LM</div>
+<div class="w-10 h-10 rounded-full border-2 border-deep-obsidian bg-surface-container-high flex items-center justify-center text-xs font-bold">+1</div>
+</div>
+<button class="w-full bg-transparent border border-antique-gold text-antique-gold py-3 rounded uppercase font-label-md text-xs tracking-widest hover:bg-antique-gold hover:text-black transition-colors duration-300">
+                        RANDEVU LİSTESİNE GİT
+                    </button>
+</div>
+<!-- Abstract visual element -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 border border-antique-gold/10 rounded-full"></div>
+<div class="absolute -right-5 -bottom-5 w-40 h-40 border border-antique-gold/5 rounded-full"></div>
+</div>
+</section>
+</main>
+<!-- Bottom Action Bar (Contextual) -->
+<nav class="fixed bottom-0 inset-x-0 z-50 bg-surface-container-lowest/90 backdrop-blur-lg border-t border-outline-variant/10 px-6 py-3 flex justify-between items-center h-20 md:hidden">
+<button class="flex flex-col items-center gap-1 text-antique-gold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[10px] font-label-md uppercase tracking-tighter">Panel</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-[10px] font-label-md uppercase tracking-tighter">Sipariş</span>
+</button>
+<!-- Floating Action Button Styled Center Nav -->
+<button class="w-14 h-14 bg-antique-gold rounded-full -mt-10 flex items-center justify-center shadow-lg shadow-antique-gold/20 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-deep-obsidian text-3xl">add</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-label-md uppercase tracking-tighter">Analiz</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-label-md uppercase tracking-tighter">Ayar</span>
+</button>
+</nav>
+<!-- Interaction Script -->
+<script>
+        const drawerToggle = document.getElementById('drawer-toggle');
+        const drawerClose = document.getElementById('drawer-close');
+        const navDrawer = document.getElementById('nav-drawer');
+        const navOverlay = document.getElementById('nav-overlay');
+
+        function openDrawer() {
+            navDrawer.classList.remove('-translate-x-full');
+            navOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        function closeDrawer() {
+            navDrawer.classList.add('-translate-x-full');
+            navOverlay.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        drawerToggle.addEventListener('click', openDrawer);
+        drawerClose.addEventListener('click', closeDrawer);
+        navOverlay.addEventListener('click', closeDrawer);
+
+        // Haptic feedback simulation for mobile buttons
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn => {
+            btn.addEventListener('touchstart', () => {
+                if (window.navigator.vibrate) window.navigator.vibrate(5);
+            });
+        });
+    </script>
+</body></html>

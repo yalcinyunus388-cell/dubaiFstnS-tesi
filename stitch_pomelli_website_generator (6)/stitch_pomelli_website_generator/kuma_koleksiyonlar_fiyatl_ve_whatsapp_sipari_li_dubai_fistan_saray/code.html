@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Kumaş Koleksiyonları | Dubai Fistan Sarayı</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { "antique-gold": "#C5A059", "surface": "#0F0F0F", "on-surface": "#e2e2e2" },
+                    fontFamily: { "headline": ["Libre Caslon Text"], "body": ["Manrope"] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        body { background-color: #0A0A0A; color: #e2e2e2; font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+        .glass-nav { background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(197, 160, 89, 0.1); }
+        .filter-btn { transition: all 0.3s; border: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.4); padding: 10px 28px; border-radius: 4px; font-weight: bold; text-transform: uppercase; font-size: 10px; letter-spacing: 0.1em; }
+        .filter-btn.active { background: #C5A059; color: #000; border-color: #C5A059; box-shadow: 0 0 20px rgba(197, 160, 89, 0.4); }
+        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% -20%, rgba(197, 160, 89, 0.08) 0%, transparent 70%); pointer-events: none; z-index: 0; }
+        .mobile-menu { display: none; }
+        @media (max-width: 1024px) {
+            .mobile-menu.active { display: flex; }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <div class="bg-glow"></div>
+
+    <!-- TopNavBar -->
+    <header class="docked full-width top-0 sticky z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30">
+        <nav class="grid grid-cols-2 lg:grid-cols-3 items-center w-full px-6 lg:px-10 py-4 max-w-[1440px] mx-auto h-20 lg:h-24">
+            <!-- Left: Mobile Menu / Search -->
+            <div class="flex items-center">
+                <button id="menuBtn" class="lg:hidden material-symbols-outlined text-antique-gold text-3xl">menu</button>
+                <button class="hidden lg:flex items-center gap-3 text-[10px] font-bold tracking-[0.2em] text-white/30 hover:text-antique-gold transition-all uppercase group">
+                    <span class="material-symbols-outlined text-lg">search</span>
+                    <span class="border-b border-white/10 group-hover:border-antique-gold pb-1">Koleksiyonu Keşfet</span>
+                </button>
+            </div>
+
+            <!-- Center: Logo -->
+            <div class="flex justify-end lg:justify-center">
+                <a class="flex flex-col items-center gap-1" href="../dubai_fistan_saray_ana_sayfa_tam_ba_lant_l/code.html">
+                    <span class="font-headline text-lg lg:text-title-lg tracking-[0.3em] text-antique-gold leading-none">DUBAI FISTAN SARAYI</span>
+                    <span class="text-[7px] lg:text-[8px] tracking-[0.6em] text-white/20 uppercase mt-1">Van • Dubai • Istanbul</span>
+                </a>
+            </div>
+
+            <!-- Right: Desktop Icons -->
+            <div class="hidden lg:flex items-center justify-end gap-8">
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">language</span>
+                    <span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">shopping_bag</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobileDrawer" class="mobile-menu fixed inset-0 z-[100] bg-black/95 flex-col p-10 gap-8 animate-fade-in lg:hidden">
+            <button id="closeBtn" class="absolute top-6 right-6 material-symbols-outlined text-white/40 text-4xl">close</button>
+            <div class="flex flex-col gap-8 mt-10">
+                <a href="../dubai_fistan_saray_ana_sayfa_tam_ba_lant_l/code.html" class="font-headline text-3xl text-white uppercase tracking-widest">Ana Sayfa</a>
+                <a href="code.html" class="font-headline text-3xl text-antique-gold border-b border-antique-gold pb-2 uppercase tracking-widest">Kumaşlar</a>
+                <a href="../haz_r_giyim_ve_galeri_fiyatl_ve_whatsapp_sipari_li_dubai_fistan_saray/code.html" class="font-headline text-3xl text-white uppercase tracking-widest">Hazır Giyim</a>
+                <a href="../zel_dikim_ve_l_sistemi_dubai_fistan_saray/code.html" class="font-headline text-3xl text-white uppercase tracking-widest">Özel Dikim</a>
+                <a href="../i_leti_im_ve_hakk_m_zda_dubai_fistan_saray/code.html" class="font-headline text-3xl text-white uppercase tracking-widest">İletişim</a>
+            </div>
+        </div>
+    </header>
+
+    <header class="relative w-full h-[300px] lg:h-[450px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-[#0A0A0A] z-10"></div>
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTlGK42B-MNNKSn-vCl6ZFbwijLhLLeST_wr2Rf6ObjCapa9Q8uBZ9JvwMJpjcqDvKzfh6eCx2cn6kMRX___4huqN_hOrFoNNXLpZA7S_NaGbyHYYk7mANPV7dG39GP4C0oQGHKaW8AxTaKkKmvi0dUWaQAKtfpYGsM9tz3Bq-F0YHpsoeaIGh0_ql1VzGbU9yd9Lde3Tysl5KWMgnUOkUA5vgOsHuJmZR38NPX6JpvrK9V3_cKpqqFmn8yQnUAXiw9ssusCK9pw" class="absolute inset-0 w-full h-full object-cover opacity-60 scale-105">
+        <div class="relative z-20 text-center px-10">
+            <h1 class="font-headline text-4xl lg:text-7xl text-antique-gold mb-4 uppercase tracking-tighter drop-shadow-2xl">Kumaş Koleksiyonları</h1>
+            <p class="font-body text-white/50 uppercase tracking-[0.6em] text-[8px] lg:text-[10px]">Zarafetin Dokunduğu En Seçkin Seriler</p>
+        </div>
+    </header>
+
+    <main class="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-10 py-12 lg:py-16">
+        <div id="catFilters" class="flex flex-wrap gap-3 lg:gap-4 mb-12 lg:mb-20 justify-center">
+            <!-- Kategoriler JS -->
+        </div>
+
+        <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16">
+            <!-- Ürünler JS -->
+        </div>
+    </main>
+
+    <footer class="relative z-10 bg-black/40 border-t border-white/5 py-12 lg:py-16 text-center">
+        <p class="text-[9px] text-white/20 uppercase tracking-[0.4em] font-bold">© 2024 DUBAI FISTAN SARAYI. TÜM HAKLARI SAKLIDIR.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const drawer = document.getElementById('mobileDrawer');
+
+        menuBtn.addEventListener('click', () => drawer.classList.add('active'));
+        closeBtn.addEventListener('click', () => drawer.classList.remove('active'));
+
+        let categories = JSON.parse(localStorage.getItem('dubai_categories')) || ["Premium Kumaşlar", "İpek"];
+        let fabrics = JSON.parse(localStorage.getItem('dubai_fabrics')) || [];
+        let selectedCategory = categories[0] || "";
+
+        function setCategory(cat) {
+            selectedCategory = cat;
+            renderFilters();
+            renderProducts();
+        }
+
+        function renderFilters() {
+            const filters = document.getElementById('catFilters');
+            filters.innerHTML = categories.map(cat => `
+                <button onclick="setCategory('${cat}')" class="filter-btn ${selectedCategory === cat ? 'active' : ''}">
+                    ${cat}
+                </button>
+            `).join('');
+        }
+
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            const filtered = fabrics.filter(f => f.cat === selectedCategory);
+
+            if(filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-20 lg:py-32 text-white/10 italic text-base lg:text-xl uppercase tracking-widest border border-white/5 rounded-[40px] bg-white/[0.01]">Henüz ürün bulunmuyor.</div>`;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(f => `
+                <div class="group animate-reveal">
+                    <div class="aspect-[3/4] bg-white/[0.03] rounded-3xl overflow-hidden border border-white/10 mb-6 lg:mb-8 relative">
+                        <img src="${f.img || ''}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60"></div>
+                    </div>
+                    <div class="px-2 space-y-3 lg:space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-headline text-2xl lg:text-3xl text-white/90">${f.name}</h3>
+                            <span class="text-antique-gold text-[9px] lg:text-[10px] font-bold tracking-widest border border-antique-gold/30 px-2 py-1">PREMIUM</span>
+                        </div>
+                        <p class="text-antique-gold font-bold tracking-widest text-[10px] lg:text-xs uppercase">${f.stock} METRE MEVCUT</p>
+                        <a href="https://wa.me/905551234567?text=${encodeURIComponent(f.name + ' kumaşı hakkında bilgi alabilir miyim?')}" class="inline-flex items-center gap-4 pt-4 text-antique-gold text-[10px] font-bold uppercase tracking-[0.3em] group/link">
+                            <span class="material-symbols-outlined text-sm">chat</span>
+                            <span class="border-b border-antique-gold/20 group-hover/link:border-antique-gold transition-all pb-1">WHATSAPP SİPARİŞ</span>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        if(categories.length > 0) setCategory(categories[0]);
+        else { renderFilters(); renderProducts(); }
+    </script>
+</body>
+</html>

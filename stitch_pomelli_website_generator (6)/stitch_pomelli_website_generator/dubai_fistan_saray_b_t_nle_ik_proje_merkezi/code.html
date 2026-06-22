@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dashboard | Dubai Fistan Sarayı Admin</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "antique-gold": "#C5A059",
+                        "deep-obsidian": "#0A0A0A",
+                        "surface": "#131313",
+                        "on-surface": "#e2e2e2",
+                        "on-surface-variant": "#d1c5b4",
+                        "outline-variant": "#4e4639"
+                    },
+                    fontFamily: { "headline": ["Libre Caslon Text"], "body": ["Manrope"] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        body { background-color: #070707; color: #e2e2e2; font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+        .sidebar-item { display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 12px; color: #d1c5b4; transition: all 0.3s; text-transform: uppercase; font-size: 13px; font-weight: 500; letter-spacing: 0.05em; }
+        .sidebar-item:hover { background: rgba(197, 160, 89, 0.1); color: #fff; }
+        .sidebar-item.active { background: linear-gradient(90deg, rgba(197, 160, 89, 0.2) 0%, rgba(197, 160, 89, 0) 100%); color: #e9c176; border-left: 3px solid #C5A059; border-radius: 0 12px 12px 0; }
+        .bento-card { background: #111111; border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 24px; transition: transform 0.3s ease, border-color 0.3s ease; }
+        .bento-card:hover { transform: translateY(-2px); border-color: rgba(197, 160, 89, 0.2); }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 10px; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="selection:bg-antique-gold/30 h-screen overflow-hidden">
+    <div class="flex h-full w-full">
+        <!-- Sidebar -->
+        <aside class="w-72 bg-[#0a0a0a] border-r border-white/5 flex flex-col p-6">
+            <div class="flex items-center gap-3 mb-10 px-2">
+                <div class="w-10 h-10 bg-antique-gold rounded-xl flex items-center justify-center">
+                    <span class="material-symbols-outlined text-black font-bold">diamond</span>
+                </div>
+                <div>
+                    <h1 class="font-headline text-lg text-antique-gold leading-none tracking-tight">DUBAI FISTAN</h1>
+                    <p class="text-[10px] text-white/40 uppercase tracking-widest mt-1">Admin Panel</p>
+                </div>
+            </div>
+
+            <nav class="flex-1 space-y-1 overflow-y-auto pr-2 scrollbar-hide">
+                <a href="code.html" class="sidebar-item active"><span class="material-symbols-outlined">grid_view</span> DASHBOARD</a>
+                <a href="../r_n_ve_kuma_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">texture</span> KUMAŞLAR</a>
+                <a href="../elbise_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">apparel</span> ELBİSELER</a>
+                <a href="../sipari_ve_zel_dikim_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">shopping_bag</span> SİPARİŞLER</a>
+                <a href="../olcu_talepleri_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">straighten</span> ÖLÇÜ TALEPLERİ</a>
+                <a href="../galeri_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">photo_library</span> GALERİ</a>
+                <a href="../instagram_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">camera</span> INSTAGRAM</a>
+                <a href="../whatsapp_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">chat</span> WHATSAPP</a>
+                <a href="../kategori_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">category</span> KATEGORİLER</a>
+                <a href="../sayfa_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">auto_stories</span> SAYFALAR</a>
+                <a href="../y_netim_paneli_site_ayarlar_ve_tam_kontrol_merkezi/code.html" class="sidebar-item"><span class="material-symbols-outlined">settings</span> SİTE AYARLARI</a>
+                <a href="../kullanici_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">group</span> KULLANICILAR</a>
+            </nav>
+
+            <div class="mt-auto pt-6 border-t border-white/5">
+                <div class="bg-white/5 p-4 rounded-2xl flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-antique-gold/20 flex items-center justify-center text-antique-gold font-bold text-xs">AD</div>
+                    <div class="flex-1"><p class="text-xs font-bold text-white">Admin</p><p class="text-[10px] text-white/40 uppercase">SUPER ADMIN</p></div>
+                    <button class="text-white/40 hover:text-white transition-colors" onclick="window.location.href='../y_netim_paneli_giri_dubai_fistan_saray/code.html'"><span class="material-symbols-outlined text-lg">logout</span></button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col min-w-0 bg-[#070707] relative overflow-hidden">
+            <header class="h-24 flex items-center justify-between px-10 relative z-10 border-b border-white/5 bg-[#070707]/80 backdrop-blur-md">
+                <div>
+                    <h2 class="font-headline text-3xl text-white tracking-tight">Genel Bakış</h2>
+                    <p class="text-[10px] text-white/30 uppercase tracking-[0.2em] mt-1">HOŞ GELDİNİZ, ATELIER PREMIUM</p>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-white/20">search</span>
+                        <input type="text" placeholder="Hızlı ara..." class="bg-white/5 border border-white/10 rounded-xl py-2.5 pl-12 pr-6 w-64 text-sm focus:outline-none focus:border-antique-gold/50 transition-all">
+                    </div>
+                </div>
+            </header>
+
+            <div class="flex-1 overflow-y-auto p-10 pb-24 scrollbar-hide">
+                <div class="max-w-[1400px] mx-auto space-y-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bento-card relative overflow-hidden group">
+                            <p class="text-[10px] font-bold text-antique-gold uppercase tracking-widest mb-4">Toplam Ciro</p>
+                            <h3 class="text-3xl font-headline text-white">₺485.200</h3>
+                        </div>
+                        <div class="bento-card">
+                            <p class="text-[10px] font-bold text-antique-gold uppercase tracking-widest mb-4">Aktif Siparişler</p>
+                            <h3 class="text-3xl font-headline text-white">42</h3>
+                        </div>
+                        <div class="bento-card">
+                            <p class="text-[10px] font-bold text-antique-gold uppercase tracking-widest mb-4">Ölçü Talebi</p>
+                            <h3 class="text-3xl font-headline text-white">18</h3>
+                        </div>
+                        <div class="bento-card">
+                            <p class="text-[10px] font-bold text-antique-gold uppercase tracking-widest mb-4">Memnuniyet</p>
+                            <h3 class="text-3xl font-headline text-white">%98.4</h3>
+                        </div>
+                    </div>
+                    <!-- Table and sidebar like previous dashboard -->
+                    <div class="bento-card !p-0 overflow-hidden">
+                        <div class="p-6 border-b border-white/5 flex justify-between items-center">
+                            <h4 class="font-headline text-xl text-white">Son Siparişler</h4>
+                        </div>
+                        <table class="w-full text-left text-sm">
+                            <thead class="text-[10px] text-white/40 uppercase tracking-widest border-b border-white/5">
+                                <tr>
+                                    <th class="px-8 py-4">Müşteri</th>
+                                    <th class="px-8 py-4">Ürün</th>
+                                    <th class="px-8 py-4">Tutar</th>
+                                    <th class="px-8 py-4">Durum</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/5">
+                                <tr class="hover:bg-white/[0.02]">
+                                    <td class="px-8 py-5 text-white font-bold">Amina Al-Fayed</td>
+                                    <td class="px-8 py-5 text-white/60">Zümrüt Kaftan</td>
+                                    <td class="px-8 py-5 font-bold text-antique-gold">₺14.500</td>
+                                    <td class="px-8 py-5"><span class="px-3 py-1 bg-antique-gold/10 text-antique-gold text-[9px] font-bold uppercase rounded-full">İşleniyor</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

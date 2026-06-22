@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Site Ayarları | Dubai Fistan Sarayı Admin</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "antique-gold": "#C5A059",
+                        "deep-obsidian": "#0A0A0A",
+                        "surface": "#131313",
+                        "on-surface": "#e2e2e2",
+                        "on-surface-variant": "#d1c5b4",
+                        "outline-variant": "#4e4639"
+                    },
+                    fontFamily: {
+                        "headline": ["Libre Caslon Text"],
+                        "body": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #070707;
+            color: #e2e2e2;
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            border-radius: 12px;
+            color: #d1c5b4;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+        .sidebar-item:hover {
+            background: rgba(197, 160, 89, 0.1);
+            color: #fff;
+        }
+        .sidebar-item.active {
+            background: linear-gradient(90deg, rgba(197, 160, 89, 0.2) 0%, rgba(197, 160, 89, 0) 100%);
+            color: #e9c176;
+            border-left: 3px solid #C5A059;
+            border-radius: 0 12px 12px 0;
+        }
+        .bento-card {
+            background: #111111;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 24px;
+        }
+        .glass-input {
+            background: #1a1a1a !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            border-radius: 12px !important;
+            color: #fff !important;
+            font-size: 14px;
+            padding: 12px 16px;
+            width: 100%;
+        }
+        .glass-input:focus {
+            border-color: #C5A059 !important;
+            outline: none;
+            box-shadow: 0 0 0 1px rgba(197, 160, 89, 0.2);
+        }
+        .label-style {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #C5A059;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 10px; }
+    </style>
+</head>
+<body class="selection:bg-antique-gold/30 h-screen overflow-hidden">
+    <div class="flex h-full w-full">
+        <!-- Sidebar -->
+        <aside class="w-72 bg-[#0a0a0a] border-r border-white/5 flex flex-col p-6">
+            <div class="flex items-center gap-3 mb-10 px-2">
+                <div class="w-10 h-10 bg-antique-gold rounded-xl flex items-center justify-center">
+                    <span class="material-symbols-outlined text-black font-bold">diamond</span>
+                </div>
+                <div>
+                    <h1 class="font-headline text-lg text-antique-gold leading-none tracking-tight">DUBAI FISTAN</h1>
+                    <p class="text-[10px] text-white/40 uppercase tracking-widest mt-1">Admin Panel</p>
+                </div>
+            </div>
+
+            <nav class="flex-1 space-y-1 overflow-y-auto pr-2 scrollbar-hide">
+                <a href="../dubai_fistan_saray_b_t_nle_ik_proje_merkezi/code.html" class="sidebar-item">
+                    <span class="material-symbols-outlined">grid_view</span> DASHBOARD
+                </a>
+                <a href="../r_n_ve_kuma_y_netimi_admin_panel/code.html" class="sidebar-item">
+                    <span class="material-symbols-outlined">texture</span> KUMAŞLAR
+                </a>
+                <a href="../elbise_y_netimi_admin_panel/code.html" class="sidebar-item">
+                    <span class="material-symbols-outlined">apparel</span> ELBİSELER
+                </a>
+                <a href="../sipari_ve_zel_dikim_y_netimi_admin_panel/code.html" class="sidebar-item">
+                    <span class="material-symbols-outlined">shopping_bag</span> SİPARİŞLER
+                </a>
+                <a href="../olcu_talepleri_admin_panel/code.html" class="sidebar-item">
+                    <span class="material-symbols-outlined">straighten</span> ÖLÇÜ TALEPLERİ
+                </a>
+                <a href="../galeri_y_netimi_admin_panel/code.html" class="sidebar-item">
+                    <span class="material-symbols-outlined">photo_library</span> GALERİ
+                </a>
+                <a href="../instagram_y_netimi_admin_panel/code.html" class="sidebar-item">
+                    <span class="material-symbols-outlined">camera</span> INSTAGRAM
+                </a>
+                <a href="../whatsapp_y_netimi_admin_panel/code.html" class="sidebar-item">
+                    <span class="material-symbols-outlined">chat</span> WHATSAPP
+                </a>
+                <a href="../kategori_y_netimi_admin_panel/code.html" class="sidebar-item">
+                    <span class="material-symbols-outlined">category</span> KATEGORİLER
+                </a>
+                <a href="../sayfa_y_netimi_admin_panel/code.html" class="sidebar-item">
+                    <span class="material-symbols-outlined">auto_stories</span> SAYFALAR
+                </a>
+                <a href="code.html" class="sidebar-item active">
+                    <span class="material-symbols-outlined">settings</span> SİTE AYARLARI
+                </a>
+                <a href="../kullanici_y_netimi_admin_panel/code.html" class="sidebar-item">
+                    <span class="material-symbols-outlined">group</span> KULLANICILAR
+                </a>
+            </nav>
+
+            <div class="mt-auto pt-6 border-t border-white/5">
+                <div class="bg-white/5 p-4 rounded-2xl flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-antique-gold/20 flex items-center justify-center text-antique-gold font-bold text-xs">AD</div>
+                    <div class="flex-1">
+                        <p class="text-xs font-bold text-white">Admin</p>
+                        <p class="text-[10px] text-white/40 uppercase">SUPER ADMIN</p>
+                    </div>
+                    <button class="text-white/40 hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-lg">logout</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col min-w-0 bg-[#070707] relative overflow-hidden">
+            <!-- Header -->
+            <header class="h-24 flex items-center justify-between px-10 relative z-10 border-b border-white/5 bg-[#070707]/80 backdrop-blur-md">
+                <div>
+                    <h2 class="font-headline text-3xl text-white tracking-tight">Site Ayarları</h2>
+                    <p class="text-[10px] text-white/30 uppercase tracking-[0.2em] mt-1">YÖNETİM PANELİ / GENEL YAPILANDIRMA</p>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-white/20">search</span>
+                        <input type="text" placeholder="Ayarlarda ara..." class="bg-white/5 border border-white/10 rounded-xl py-2.5 pl-12 pr-6 w-64 text-sm focus:outline-none focus:border-antique-gold/50 transition-all">
+                    </div>
+                    <button class="bg-antique-gold text-black font-bold text-[11px] uppercase tracking-widest px-8 py-3 rounded-xl shadow-lg shadow-antique-gold/10 hover:brightness-110 transition-all">
+                        DEĞİŞİKLİKLERİ KAYDET
+                    </button>
+                </div>
+            </header>
+
+            <!-- Scrollable Area -->
+            <div class="flex-1 overflow-y-auto p-10 pb-24 relative z-10 scrollbar-hide">
+                <div class="grid grid-cols-12 gap-8 max-w-[1400px] mx-auto">
+
+                    <!-- Left Column: Brand & Hero -->
+                    <div class="col-span-12 lg:col-span-4 space-y-8">
+                        <!-- Marka & Görsel -->
+                        <div class="bento-card">
+                            <h3 class="label-style flex items-center gap-2 mb-6">
+                                <span class="material-symbols-outlined text-sm">image</span> MARKA & GÖRSEL
+                            </h3>
+                            <div class="space-y-6">
+                                <div>
+                                    <label class="label-style !text-[10px] !text-white/40">Logo</label>
+                                    <div class="border-2 border-dashed border-white/10 rounded-2xl p-8 text-center hover:border-antique-gold/30 transition-all cursor-pointer group">
+                                        <span class="material-symbols-outlined text-4xl text-white/20 group-hover:text-antique-gold/50 transition-colors">upload_file</span>
+                                        <p class="text-[10px] text-white/40 uppercase mt-4">LOGO YÜKLE (SVG/PNG)</p>
+                                        <button class="text-[11px] text-antique-gold uppercase font-bold mt-4">DOSYA SEÇ</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="label-style !text-[10px] !text-white/40">Hero Videosu (URL)</label>
+                                    <input type="text" value="https://youtube.com/v/..." class="glass-input">
+                                </div>
+                                <div>
+                                    <label class="label-style !text-[10px] !text-white/40">Promosyon Bannerları</label>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="aspect-square bg-white/5 rounded-xl flex items-center justify-center border border-white/5 cursor-pointer hover:bg-white/10 transition-all">
+                                            <span class="material-symbols-outlined text-white/20">add</span>
+                                        </div>
+                                        <div class="aspect-square bg-white/5 rounded-xl flex items-center justify-center border border-white/5 cursor-pointer hover:bg-white/10 transition-all">
+                                            <span class="material-symbols-outlined text-white/20">add</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hero Alanı Mesajı -->
+                        <div class="bento-card border-l-4 border-antique-gold/30">
+                            <h3 class="label-style mb-6">HERO ALANI MESAJI</h3>
+                            <div>
+                                <label class="label-style !text-[10px] !text-white/40">Ana Başlık</label>
+                                <textarea class="glass-input min-h-[100px] resize-none">Dubai'nin En Seçkin Fistan ve Kaftan Koleksiyonu</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Info & SEO -->
+                    <div class="col-span-12 lg:col-span-8 space-y-8">
+                        <!-- İletişim Bilgileri -->
+                        <div class="bento-card">
+                            <h3 class="label-style flex items-center gap-2 mb-8">
+                                <span class="material-symbols-outlined text-sm">contact_support</span> İLETİŞİM BİLGİLERİ
+                            </h3>
+                            <div class="grid grid-cols-2 gap-8">
+                                <div class="space-y-6">
+                                    <div>
+                                        <label class="label-style !text-[10px] !text-white/40">Telefon Numarası</label>
+                                        <div class="relative">
+                                            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-antique-gold text-lg">call</span>
+                                            <input type="text" value="+90 (555) 123 45 67" class="glass-input pl-12">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="label-style !text-[10px] !text-white/40">WhatsApp Hattı</label>
+                                        <div class="relative">
+                                            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-emerald-500 text-lg">chat</span>
+                                            <input type="text" value="+90 555 123 45 67" class="glass-input pl-12">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="label-style !text-[10px] !text-white/40">Çalışma Saatleri</label>
+                                        <input type="text" value="Hafta İçi: 09:00 - 19:00 | Hafta Son" class="glass-input">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="label-style !text-[10px] !text-white/40">Mağaza Adresi</label>
+                                    <textarea class="glass-input min-h-[220px] resize-none">Nişantaşı, Valikonağı Cd. No:123, Şişli/İstanbul</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sosyal Medya -->
+                        <div class="bento-card">
+                            <h3 class="label-style mb-8 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-sm">share</span> SOSYAL MEDYA BAĞLANTILARI
+                            </h3>
+                            <div class="grid grid-cols-2 gap-8">
+                                <div>
+                                    <label class="label-style !text-[10px] !text-white/40">Instagram Link</label>
+                                    <input type="text" value="https://instagram.com/dubaifistan" class="glass-input">
+                                </div>
+                                <div>
+                                    <label class="label-style !text-[10px] !text-white/40">Facebook Link</label>
+                                    <input type="text" value="https://facebook.com/dubaifistans" class="glass-input">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SEO Ayarları -->
+                        <div class="bento-card">
+                            <div class="flex items-center justify-between mb-8">
+                                <h3 class="label-style !mb-0 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">search</span> SEO AYARLARI (ARAMA MOTORU)
+                                </h3>
+                                <span class="bg-antique-gold/10 text-antique-gold text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">OPTİMİZE EDİLDİ</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-8 mb-6">
+                                <div>
+                                    <label class="label-style !text-[10px] !text-white/40">Meta Başlık (Title Tag)</label>
+                                    <input type="text" value="Dubai Fistan Sarayı | Lüks Kaftan ve" class="glass-input">
+                                </div>
+                                <div>
+                                    <label class="label-style !text-[10px] !text-white/40">Odak Anahtar Kelimeler</label>
+                                    <input type="text" value="fistan, kaftan, dubai kumaşları, öze" class="glass-input">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="label-style !text-[10px] !text-white/40">Meta Açıklama (Description)</label>
+                                <textarea class="glass-input min-h-[120px] resize-none">Dubai'nin en kaliteli kumaşları ve usta ellerden çıkan özel dikim fistan modelleri ile zerafetinizi taçlandırın. Lüks fistan ve kaftan koleksiyonumuzu hemen keşfedin.</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Status Bar -->
+            <footer class="absolute bottom-0 left-0 right-0 h-12 bg-[#0a0a0a] border-t border-white/5 flex items-center justify-between px-10 text-[10px] font-bold text-white/30 uppercase tracking-[0.2em] z-20">
+                <div class="flex items-center gap-6">
+                    <span class="flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+                        CANLI SİSTEM BAĞLANTISI: OK
+                    </span>
+                    <span>IP: 192.168.1.1</span>
+                </div>
+                <div class="flex items-center gap-8">
+                    <span class="font-normal text-white/10 tracking-normal lowercase italic">v4.5.1 enterprise edition</span>
+                    <span class="text-antique-gold/60">LAST SYNC: 2 MINS AGO</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Form interactivity simulation
+        const saveBtn = document.querySelector('button:contains("DEĞİŞİKLİKLERİ")');
+        if(saveBtn) {
+            saveBtn.addEventListener('click', () => {
+                saveBtn.innerText = 'KAYDEDİLİYOR...';
+                setTimeout(() => {
+                    saveBtn.innerText = 'DEĞİŞİKLİKLERİ KAYDET';
+                    alert('Ayarlar başarıyla güncellendi.');
+                }, 1000);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DUBAI FISTAN SARAYI | Luxury Boutique</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            color: #C5A059;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 10, 0.8);
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .shimmer-text {
+            background: linear-gradient(90deg, #C5A059 0%, #FFF 50%, #C5A059 100%);
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+        body {
+            background-color: #000000;
+            color: #e2e2e2;
+            overflow-x: hidden;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#e9c176",
+                        "antique-gold": "#C5A059",
+                        "deep-obsidian": "#0A0A0A",
+                        "surface": "#131313",
+                        "background": "#131313",
+                        "on-surface-variant": "#d1c5b4",
+                        "outline-variant": "#4e4639"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Manrope"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "label-md": ["Manrope"],
+                        "title-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "container-max": "1440px"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface">
+<!-- Mobile Navigation Drawer (Hidden by default) -->
+<div class="fixed inset-0 z-[100] bg-black/95 transform translate-x-full transition-transform duration-500 ease-in-out" id="nav-drawer">
+<div class="flex flex-col h-full px-margin-mobile py-8">
+<div class="flex justify-between items-center mb-12">
+<span class="font-headline-md text-title-lg tracking-widest text-antique-gold">DUBAI FISTAN SARAYI</span>
+<button class="p-2" onclick="toggleNav()">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<nav class="flex flex-col space-y-8">
+<a class="font-label-md text-headline-md tracking-[0.2em] uppercase text-antique-gold" href="#">KUMAŞLAR</a>
+<a class="font-label-md text-headline-md tracking-[0.2em] uppercase text-on-surface-variant" href="#">ÖZEL DİKİM</a>
+<a class="font-label-md text-headline-md tracking-[0.2em] uppercase text-on-surface-variant" href="#">HAZIR GİYİM</a>
+<a class="font-label-md text-headline-md tracking-[0.2em] uppercase text-on-surface-variant" href="#">GALERİ</a>
+<a class="font-label-md text-headline-md tracking-[0.2em] uppercase text-on-surface-variant" href="#">İLETİŞİM</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant/30 pt-8">
+<button class="w-full bg-antique-gold text-black py-4 font-label-md tracking-widest uppercase mb-4">RANDEVU AL</button>
+<div class="flex justify-center space-x-6">
+<span class="material-symbols-outlined">language</span>
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-margin-mobile py-4">
+<button class="p-1" onclick="toggleNav()">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<h1 class="font-headline-md text-title-lg tracking-widest text-antique-gold">DUBAI FISTAN SARAYI</h1>
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative h-[751px] flex items-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full" data-alt="A cinematic, low-angle shot of a high-end atelier interior with dark marble floors and soft golden spotlighting. In the center, a luxury evening gown made of shimmering silk and intricate golden embroidery stands on a minimalist mannequin. The background is blurred, focusing on the rich texture of the fabric and the warm, opulent atmosphere of the Dubai boutique." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhghaORpCMIyt6XdsLQ-VA3hFGqyrKFnJ7AeuLRAKkBIG5KUcZqIcRlwbyupPLTPXrR1Gw2OH8jYlqB5lg3SSr8JGwLFH2Rl0E9pyP8n7Xo7A8vrUtPpgYZOto9cgBuEcMKBMUGST-2e0KeS7ZLRP7f54AmSAP8eYeLvRaT0EQ90M5Ik18yL4-CP1rXG5cbQhL9sW_szJbVnUeWfuY0CFeNV-x1qVvFYo-vHRNMuZuMf9RoIAHssQomHyZddu30f5H-B6Oh2Cenw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile pb-12 w-full">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile mb-4 leading-tight">
+                    Zarafetin En Saf Hali: <br/>
+<span class="shimmer-text">İpek Dokunuşlar</span>
+</h2>
+<p class="text-on-surface-variant mb-8 max-w-xs font-body-md">Dubai'nin en özel kumaş koleksiyonları ve usta işçilikle hazırlanan tasarımlarımızla tanışın.</p>
+<div class="flex flex-col space-y-4">
+<button class="bg-antique-gold text-black py-4 font-label-md tracking-widest uppercase hover:scale-105 transition-transform">KOLEKSİYONU KEŞFET</button>
+<button class="border border-antique-gold text-antique-gold py-4 font-label-md tracking-widest uppercase">RANDEVU OLUŞTUR</button>
+</div>
+</div>
+</section>
+<!-- Kumaş Koleksiyonları (Macro Focus) -->
+<section class="py-16 bg-deep-obsidian">
+<div class="px-margin-mobile mb-8">
+<span class="text-antique-gold font-label-md tracking-widest uppercase block mb-2">Özel Seçki</span>
+<h3 class="font-headline-md text-headline-md">Kumaş Koleksiyonları</h3>
+</div>
+<div class="flex overflow-x-auto pb-8 snap-x snap-mandatory no-scrollbar space-x-4 px-margin-mobile">
+<!-- Card 1 -->
+<div class="flex-none w-[80vw] snap-center">
+<div class="aspect-[3/4] mb-4 overflow-hidden relative group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A macro close-up of premium metallic gold silk fabric, showing every intricate weave and shimmer under dramatic studio lighting. The texture appears incredibly soft and luminous, suggesting high-quality Dubai craftsmanship. The shadows are deep and rich, emphasizing the liquid-like flow of the textile." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0AIvJM99QpJnCfcygKyrvd7bFqQL9FHrU351H5SDhBOql3t3b09FBN4lm5YrXg1pFH6-qj1FwjD7WCpJIMTeRmZK-O3k3lnhzetcfIyXXQf7LTU5KeUNTyA9KujTKgQ8HmPPvcT13SvQ_-siiRWaaPFEoZyhBTSPnsWopkSX5zJGY5WXE5WA3281Vm31nk1xuPAAcf0jI1GyaslvnquGfqBpMwfF1THAi7YlvJZxY8eljByo9SDyr-tN_ic1BziPOMcfmOsXnew')"></div>
+<div class="absolute inset-0 border border-antique-gold/0 group-hover:border-antique-gold/40 transition-all duration-300"></div>
+</div>
+<h4 class="font-headline-md text-title-lg text-antique-gold">Saray İpeği</h4>
+<p class="text-on-surface-variant font-body-md text-sm uppercase tracking-wider">Altın İşlemeli Seri</p>
+</div>
+<!-- Card 2 -->
+<div class="flex-none w-[80vw] snap-center">
+<div class="aspect-[3/4] mb-4 overflow-hidden relative group">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A high-resolution detail shot of deep black velvet fabric adorned with hand-stitched silver and diamond-like beads. The lighting catches the sparkle of the embroidery against the matte, light-absorbing depth of the luxury velvet. The composition is elegant and minimalist, focusing on the tactile richness of the haute couture material." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBs-ktENcjRscJIynU__UxH9_i7Js8FWz_5vfNFUOXCN_Mwc7RPdDqb2w7nqHXEgPqFOwl8d0CIP11ZlFPfuxH8aq-_ZgVUhLpIGJEbj-8anFdn8JmeU0gzcb_qdHNuGg8ASv1qhhsewzV9L1xzQaj0dI4dUq73dExSaRSSAsaeeyt0oYd06ipeAm-L2ATPLihLmsz8HiZfy1NhhyjB0YL-XgnqGQxrz5pSJPUsAz5Cnf4FgkCnMX08J7cuKgNYwDyuo6_H1aACvw')"></div>
+<div class="absolute inset-0 border border-antique-gold/0 group-hover:border-antique-gold/40 transition-all duration-300"></div>
+</div>
+<h4 class="font-headline-md text-title-lg text-antique-gold">Gece Siyahı</h4>
+<p class="text-on-surface-variant font-body-md text-sm uppercase tracking-wider">Kadife Dokulu Fransız Danteli</p>
+</div>
+</div>
+</section>
+<!-- Hazır Giyim Section (Asymmetric Bento) -->
+<section class="py-16 bg-black">
+<div class="px-margin-mobile mb-10 text-center">
+<h3 class="font-headline-md text-headline-md mb-2">Hazır Giyim</h3>
+<div class="w-12 h-[1px] bg-antique-gold mx-auto"></div>
+</div>
+<div class="grid grid-cols-2 gap-3 px-margin-mobile">
+<div class="col-span-2 relative aspect-video overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" data-alt="A wide cinematic shot of a luxury boutique interior in Dubai, featuring rows of elegant kaftans and evening wear on minimalist brass racks. The lighting is warm and atmospheric, reflecting off polished surfaces. A professional designer is seen in the distance, adjusting a garment, adding a sense of artisan craft and exclusivity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjpTZRAQLPz705jkT3ZxpU7W3Y9cSKQqqEBhY2Do5XdbgXpjfwXjcvZ2yH4rkBAfg9L-PXYqjU3NI53eEccEpGXRXUxpv2NC9-1eKuuy8XW8KhKy8VEMoiZkw5e-eTqaKwhD2UVweO5VIxOW0A2eWWYp8IXmXZvHavahrVpnBr0Uyz5jlWwQCiRdFl24PPdhHcJIIMJqsm8k0QoIv0v6crXWdx2F8M76foOWUHRB5jCUjp9ZM8FRWIPk3QBDiRVH8fF_qeJl4hFQ')"></div>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-black/60 backdrop-blur-md text-antique-gold px-3 py-1 text-[10px] tracking-widest font-bold uppercase">Yeni Sezon</span>
+</div>
+</div>
+<div class="aspect-[4/5] overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A portrait shot of a model wearing a contemporary, minimalist black abaya with subtle gold piping along the edges. She stands in a sophisticated architectural setting with sharp shadows and warm highlights, embodying the Affluent Serenity aesthetic of the brand. The look is modern, modest, and high-fashion." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIQMcL4MZVsmvNS2fil-vbsLLr9z3yEcY1hG5cRV93tex1iRlvRSej9DbGerzC2-VKwNSAxY6JF-lhryQ95JThV1w6MQwoWQZrO9B-y-ujLGFRbDU7yXpUiMexTBmY4EVN4khvdbdkTAXZXFFJmODWVUh7GyW2bu1Asp6auPVMcyFS4hw8MOAwhHPFX88ewaqwmv7D_M6IkKmem63Ok6bej3rBImECbwX0azVf5Y4nkqZ1JhV0kZ9wMN0anCA1EuVQ_rJWBGttKw')"></div>
+</div>
+<div class="aspect-[4/5] overflow-hidden relative translate-y-8">
+<div class="w-full h-full bg-cover bg-center" data-alt="Close-up of a luxury accessory, perhaps a beaded clutch or a silk scarf, placed on a dark marble pedestal. The item features intricate patterns that reflect Dubai's heritage and modern luxury. The focus is sharp on the craftsmanship, with a soft-focus boutique background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXcWLx5sCLhiLLzdp8EqDGviju7WS6gdr2TYF4O4E6VJH_Ze1Cc7fUus_xTCa6N3sLCSa3pwRfcmYK4s-rF1v9WrKbw31yLBp4Ri_8hhvJziP4NAPxFAqf-JcdTYaBkp89GmxmTpsa_Zc2rWZleYQGquuK_l02lX4DI-iyOs3weTHKxNFEes00dCNBiCOKKhbZ4-BdEVcdDacje3OcZ7gBFNXBqvpwxip2FvpYeV1K3dwEMMtJWa1wWnxgw8jkvuq-12uKt949EA')"></div>
+</div>
+</div>
+<div class="mt-20 text-center px-margin-mobile">
+<p class="font-body-md text-on-surface-variant italic mb-6">"Her dikişte bir hikaye, her kumaşta bir asalet."</p>
+<button class="border-b border-antique-gold text-antique-gold pb-1 font-label-md tracking-widest uppercase">TÜMÜNÜ GÖRÜNTÜLE</button>
+</div>
+</section>
+<!-- Newsletter / Contact -->
+<section class="py-20 px-margin-mobile bg-surface-container-lowest">
+<div class="max-w-md mx-auto text-center">
+<h4 class="font-headline-md text-headline-md text-antique-gold mb-4">Ayrıcalıklı Bülten</h4>
+<p class="text-on-surface-variant font-body-md mb-8">Yeni koleksiyonlar ve özel etkinliklerden ilk siz haberdar olun.</p>
+<form class="space-y-6">
+<div class="relative">
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-antique-gold focus:ring-0 text-on-surface font-label-md py-3 placeholder:text-outline/50 uppercase" placeholder="E-POSTA ADRESİNİZ" type="email"/>
+</div>
+<button class="w-full bg-antique-gold text-black py-4 font-label-md tracking-widest uppercase hover:bg-primary transition-colors">KAYDOL</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/20 pt-12 pb-24">
+<div class="px-margin-mobile text-center">
+<div class="font-headline-md text-headline-md text-antique-gold mb-8">DUBAI FISTAN SARAYI</div>
+<div class="grid grid-cols-2 gap-y-6 mb-12 text-left">
+<div>
+<h5 class="text-antique-gold font-label-md mb-4 uppercase">KEŞFET</h5>
+<ul class="space-y-2 text-on-surface-variant text-sm">
+<li>Koleksiyonlar</li>
+<li>Özel Dikim</li>
+<li>Mağazalarımız</li>
+</ul>
+</div>
+<div>
+<h5 class="text-antique-gold font-label-md mb-4 uppercase">YARDIM</h5>
+<ul class="space-y-2 text-on-surface-variant text-sm">
+<li>Sıkça Sorulan Sorular</li>
+<li>Kargo Takip</li>
+<li>İletişim</li>
+</ul>
+</div>
+</div>
+<div class="flex justify-center space-x-6 mb-8 text-on-surface-variant">
+<span class="material-symbols-outlined text-2xl">face_nod</span>
+<span class="material-symbols-outlined text-2xl">camera</span>
+</div>
+<p class="text-[10px] tracking-widest text-outline uppercase">© 2024 DUBAI FISTAN SARAYI. TÜM HAKLARI SAKLIDIR.</p>
+</div>
+</footer>
+<!-- WhatsApp CTA (Floating) -->
+<a class="fixed bottom-6 right-6 z-[60] bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-95" href="https://wa.me/yournumber">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+</a>
+<script>
+        function toggleNav() {
+            const drawer = document.getElementById('nav-drawer');
+            if (drawer.classList.contains('translate-x-full')) {
+                drawer.classList.remove('translate-x-full');
+                drawer.classList.add('translate-x-0');
+                document.body.style.overflow = 'hidden';
+            } else {
+                drawer.classList.remove('translate-x-0');
+                drawer.classList.add('translate-x-full');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Micro-interaction for scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body></html>

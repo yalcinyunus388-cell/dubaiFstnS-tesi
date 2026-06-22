@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Sayfa Yönetimi | Dubai Fistan Sarayı Admin</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "antique-gold": "#C5A059",
+                        "deep-obsidian": "#0A0A0A",
+                        "surface": "#131313",
+                        "on-surface": "#e2e2e2",
+                        "on-surface-variant": "#d1c5b4",
+                        "outline-variant": "#4e4639"
+                    },
+                    fontFamily: { "headline": ["Libre Caslon Text"], "body": ["Manrope"] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        body { background-color: #070707; color: #e2e2e2; font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+        .sidebar-item { display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 12px; color: #d1c5b4; transition: all 0.3s; text-transform: uppercase; font-size: 13px; font-weight: 500; letter-spacing: 0.05em; }
+        .sidebar-item:hover { background: rgba(197, 160, 89, 0.1); color: #fff; }
+        .sidebar-item.active { background: linear-gradient(90deg, rgba(197, 160, 89, 0.2) 0%, rgba(197, 160, 89, 0) 100%); color: #e9c176; border-left: 3px solid #C5A059; border-radius: 0 12px 12px 0; }
+        .bento-card { background: #111111; border: 1px solid rgba(255, 255, 255, 0.03); border-radius: 20px; padding: 24px; }
+    </style>
+</head>
+<body class="selection:bg-antique-gold/30 h-screen overflow-hidden">
+    <div class="flex h-full w-full">
+        <aside class="w-72 bg-[#0a0a0a] border-r border-white/5 flex flex-col p-6">
+            <div class="flex items-center gap-3 mb-10 px-2">
+                <div class="w-10 h-10 bg-antique-gold rounded-xl flex items-center justify-center">
+                    <span class="material-symbols-outlined text-black font-bold">diamond</span>
+                </div>
+                <div>
+                    <h1 class="font-headline text-lg text-antique-gold leading-none tracking-tight">DUBAI FISTAN</h1>
+                    <p class="text-[10px] text-white/40 uppercase tracking-widest mt-1">Admin Panel</p>
+                </div>
+            </div>
+            <nav class="flex-1 space-y-1 overflow-y-auto pr-2 scrollbar-hide">
+                <a href="../dubai_fistan_saray_b_t_nle_ik_proje_merkezi/code.html" class="sidebar-item"><span class="material-symbols-outlined">grid_view</span> DASHBOARD</a>
+                <a href="../r_n_ve_kuma_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">texture</span> KUMAŞLAR</a>
+                <a href="../elbise_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">apparel</span> ELBİSELER</a>
+                <a href="../sipari_ve_zel_dikim_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">shopping_bag</span> SİPARİŞLER</a>
+                <a href="../olcu_talepleri_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">straighten</span> ÖLÇÜ TALEPLERİ</a>
+                <a href="../galeri_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">photo_library</span> GALERİ</a>
+                <a href="../instagram_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">camera</span> INSTAGRAM</a>
+                <a href="../whatsapp_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">chat</span> WHATSAPP</a>
+                <a href="../kategori_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">category</span> KATEGORİLER</a>
+                <a href="code.html" class="sidebar-item active"><span class="material-symbols-outlined">auto_stories</span> SAYFALAR</a>
+                <a href="../y_netim_paneli_site_ayarlar_ve_tam_kontrol_merkezi/code.html" class="sidebar-item"><span class="material-symbols-outlined">settings</span> SİTE AYARLARI</a>
+                <a href="../kullanici_y_netimi_admin_panel/code.html" class="sidebar-item"><span class="material-symbols-outlined">group</span> KULLANICILAR</a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 flex flex-col min-w-0 bg-[#070707] relative overflow-hidden">
+            <header class="h-24 flex items-center justify-between px-10 border-b border-white/5 bg-[#070707]/80 backdrop-blur-md">
+                <div>
+                    <h2 class="font-headline text-3xl text-white tracking-tight">Sayfa Yönetimi</h2>
+                    <p class="text-[10px] text-white/30 uppercase tracking-[0.2em] mt-1">İÇERİK VE CMS YÖNETİMİ</p>
+                </div>
+            </header>
+
+            <div class="flex-1 overflow-y-auto p-10 pb-24 scrollbar-hide">
+                <div class="max-w-[1400px] mx-auto space-y-8">
+                    <div class="bento-card !p-0 overflow-hidden">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="text-[10px] text-white/40 uppercase tracking-widest border-b border-white/5">
+                                    <th class="px-8 py-4 font-semibold">Sayfa İsmi</th>
+                                    <th class="px-8 py-4 font-semibold">URL</th>
+                                    <th class="px-8 py-4 font-semibold">Durum</th>
+                                    <th class="px-8 py-4 font-semibold text-right">İşlem</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                                    <td class="px-8 py-5 text-white font-bold uppercase tracking-widest">Ana Sayfa Vitrin</td>
+                                    <td class="px-8 py-5 text-white/30">/anasayfa</td>
+                                    <td class="px-8 py-5"><span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-[9px] font-bold uppercase rounded-full">YAYINDA</span></td>
+                                    <td class="px-8 py-5 text-right"><button class="material-symbols-outlined text-white/20 hover:text-antique-gold transition-colors">edit_note</button></td>
+                                </tr>
+                                <tr class="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
+                                    <td class="px-8 py-5 text-white font-bold uppercase tracking-widest">Hakkımızda & Miras</td>
+                                    <td class="px-8 py-5 text-white/30">/kurumsal</td>
+                                    <td class="px-8 py-5"><span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-[9px] font-bold uppercase rounded-full">YAYINDA</span></td>
+                                    <td class="px-8 py-5 text-right"><button class="material-symbols-outlined text-white/20 hover:text-antique-gold transition-colors">edit_note</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

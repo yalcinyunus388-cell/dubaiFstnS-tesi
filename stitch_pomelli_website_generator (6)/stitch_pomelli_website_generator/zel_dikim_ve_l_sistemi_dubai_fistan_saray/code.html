@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Özel Dikim | Dubai Fistan Sarayı</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { "antique-gold": "#C5A059", "surface": "#0F0F0F", "deep-obsidian": "#0A0A0A" },
+                    fontFamily: { "headline": ["Libre Caslon Text"], "body": ["Manrope"] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        body { background-color: #0A0A0A; color: #e2e2e2; font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+        .glass-nav { background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(197, 160, 89, 0.1); }
+        .glass-panel { background: rgba(26, 26, 26, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .gold-glow { text-shadow: 0 0 20px rgba(197, 160, 89, 0.3); }
+        .mobile-menu { display: none; background-color: #000000 !important; }
+        @media (max-width: 1024px) {
+            .mobile-menu.active { display: flex; z-index: 9999 !important; position: fixed; inset: 0; }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- TopNavBar -->
+    <header class="docked full-width top-0 sticky z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30">
+        <nav class="grid grid-cols-2 lg:grid-cols-3 items-center w-full px-6 lg:px-10 py-4 max-w-[1440px] mx-auto h-20 lg:h-24">
+            <!-- Left: Search/Menu (Mobile Toggle) -->
+            <div class="flex items-center">
+                <button id="menuBtn" class="lg:hidden material-symbols-outlined text-antique-gold text-3xl">menu</button>
+                <button class="hidden lg:flex items-center gap-3 text-[10px] font-bold tracking-[0.2em] text-white/30 hover:text-antique-gold transition-all uppercase group">
+                    <span class="material-symbols-outlined text-lg">search</span>
+                    <span class="border-b border-white/10 group-hover:border-antique-gold pb-1">Koleksiyonu Keşfet</span>
+                </button>
+            </div>
+
+            <!-- Center: Logo -->
+            <div class="flex justify-end lg:justify-center">
+                <a class="flex flex-col items-center gap-1" href="../dubai_fistan_saray_ana_sayfa_tam_ba_lant_l/code.html">
+                    <span class="font-headline text-lg lg:text-title-lg tracking-[0.3em] text-antique-gold leading-none">DUBAI FISTAN SARAYI</span>
+                    <span class="text-[7px] lg:text-[8px] tracking-[0.6em] text-white/20 uppercase mt-1">Van • Dubai • Istanbul</span>
+                </a>
+            </div>
+
+            <!-- Right: Icons (Hidden on mobile or moved) -->
+            <div class="hidden lg:flex items-center justify-end gap-8">
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">language</span>
+                    <span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">shopping_bag</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobileDrawer" class="mobile-menu hidden fixed inset-0 bg-black flex-col p-10 gap-8 animate-fade-in lg:hidden">
+            <div class="flex justify-end">
+                <button id="closeBtn" class="material-symbols-outlined text-white/40 text-4xl">close</button>
+            </div>
+            <div class="flex flex-col gap-8 mt-4">
+                <a href="../dubai_fistan_saray_ana_sayfa_tam_ba_lant_l/code.html" class="font-headline text-3xl text-white uppercase tracking-widest">Ana Sayfa</a>
+                <a href="../kuma_koleksiyonlar_fiyatl_ve_whatsapp_sipari_li_dubai_fistan_saray/code.html" class="font-headline text-3xl text-white uppercase tracking-widest">Kumaşlar</a>
+                <a href="../haz_r_giyim_ve_galeri_fiyatl_ve_whatsapp_sipari_li_dubai_fistan_saray/code.html" class="font-headline text-3xl text-white uppercase tracking-widest">Hazır Giyim</a>
+                <a href="code.html" class="font-headline text-3xl text-antique-gold border-b border-antique-gold pb-2 uppercase tracking-widest">Özel Dikim</a>
+                <a href="../i_leti_im_ve_hakk_m_zda_dubai_fistan_saray/code.html" class="font-headline text-3xl text-white uppercase tracking-widest">İletişim</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <header class="relative w-full h-[300px] lg:h-[400px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-[#0A0A0A] z-10"></div>
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKAtQASIbYjCYmVPfmBWKnX58tSHurbJTsxgGYzTJIDDj6hy2D3i48PYwhJz1uM6g7S1xqRAMMRDgcBpVZr3UTLKT4XYiD_HCUbq-QAZeyYJiUaHLH8rHybTkYjKhkwodXrjwInk5ExSGM0H7H78aTSrG6etTT37uGo87C0ggsAx2ZkXXJjK1F-lGHhLJdVzA3ZT3kzkYw_Ie8s44YUX4a-yszZfhepsOfbqF50dE5s_vW91_eBl3XfDl2po1JXjStSHziNpj0FQ" class="absolute inset-0 w-full h-full object-cover opacity-40">
+            <div class="relative z-20 text-center px-6">
+                <h1 class="font-headline text-4xl lg:text-6xl text-antique-gold mb-2 uppercase gold-glow">Özel Dikim Atölyesi</h1>
+                <p class="font-body text-white/40 uppercase tracking-[0.3em] text-[8px] lg:text-xs">Sanatın Bedene Bürünmüş Hali</p>
+            </div>
+        </header>
+
+        <section class="max-w-[1440px] mx-auto px-6 lg:px-10 py-12 lg:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
+                <div class="space-y-6 lg:space-y-8 order-2 lg:order-1">
+                    <h2 class="font-headline text-3xl lg:text-4xl text-white">Hassas Ölçü Girişi</h2>
+                    <p class="text-white/40 leading-relaxed text-sm lg:text-base">Kusursuz bir görünüm için vücut ölçülerinizi eksiksiz giriniz. Uzman terzilerimiz bu veriler ışığında size en uygun kalıbı hazırlayacaktır.</p>
+                    <div class="glass-panel p-6 lg:p-10 rounded-3xl space-y-6 lg:space-y-8">
+                        <div class="grid grid-cols-2 gap-4 lg:gap-8">
+                            <div class="space-y-2"><label class="text-[9px] lg:text-[10px] text-antique-gold font-bold uppercase tracking-widest">Boy (cm)</label><input type="number" class="w-full bg-white/5 border-b border-white/10 py-3 text-white focus:border-antique-gold outline-none text-sm"></div>
+                            <div class="space-y-2"><label class="text-[9px] lg:text-[10px] text-antique-gold font-bold uppercase tracking-widest">Kilo (kg)</label><input type="number" class="w-full bg-white/5 border-b border-white/10 py-3 text-white focus:border-antique-gold outline-none text-sm"></div>
+                            <div class="space-y-2"><label class="text-[9px] lg:text-[10px] text-antique-gold font-bold uppercase tracking-widest">Göğüs (cm)</label><input type="number" class="w-full bg-white/5 border-b border-white/10 py-3 text-white focus:border-antique-gold outline-none text-sm"></div>
+                            <div class="space-y-2"><label class="text-[9px] lg:text-[10px] text-antique-gold font-bold uppercase tracking-widest">Bel (cm)</label><input type="number" class="w-full bg-white/5 border-b border-white/10 py-3 text-white focus:border-antique-gold outline-none text-sm"></div>
+                        </div>
+                        <button class="w-full bg-antique-gold text-black font-bold py-4 lg:py-5 rounded-xl uppercase tracking-widest hover:brightness-110 transition-all text-xs">ÖLÇÜLERİ GÖNDER</button>
+                    </div>
+                </div>
+                <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/5 order-1 lg:order-2">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ3_SbW5CEnIu7GUnCAk0mTQemZGZ77ik42fD9FhKpUDcnfXXRxO_B5GznhndYl_cXtGuNSUJrMiVBPBffyz2MMy-kSnHEbonzZ1NTuRQ0AZc2ou241Ly2fOP8jUhIf5u-t_MtPY1TqRmLa0fPv5sxeKx5psagTfEtj7S3-WStBeaGiafzZVBqtTvmmG5rkLvoIa2n_0PXcm-f3UUOjpY3vMIJkkXaHuvv0OIPvd8nfUIPlCDB2t90_DvM6tj7m0Hk-4dAvRMNiQ" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black/20 border-t border-white/5 py-12 text-center mt-20">
+        <p class="text-[9px] text-white/20 uppercase tracking-[0.4em] font-bold">© 2024 DUBAI FISTAN SARAYI. TÜM HAKLARI SAKLIDIR.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const drawer = document.getElementById('mobileDrawer');
+
+        menuBtn.addEventListener('click', () => drawer.classList.add('active'));
+        closeBtn.addEventListener('click', () => drawer.classList.remove('active'));
+    </script>
+</body>
+</html>

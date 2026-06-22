@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="dark" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>İletişim | Dubai Fistan Sarayı</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { "antique-gold": "#C5A059", "deep-obsidian": "#0A0A0A", "surface": "#131313" },
+                    fontFamily: { "headline": ["Libre Caslon Text"], "body": ["Manrope"] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        body { background-color: #0A0A0A; color: #e2e2e2; font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+        .glass-nav { background: rgba(10, 10, 10, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(197, 160, 89, 0.1); }
+        .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 24px; padding: 40px; }
+        .mobile-menu { display: none; background-color: #000000 !important; }
+        @media (max-width: 1024px) {
+            .mobile-menu.active { display: flex; z-index: 9999 !important; position: fixed; inset: 0; }
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- TopNavBar -->
+    <header class="docked full-width top-0 sticky z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30 h-20 lg:h-24">
+        <nav class="grid grid-cols-2 lg:grid-cols-3 items-center w-full px-6 lg:px-10 py-4 max-w-[1440px] mx-auto h-full">
+            <div class="flex items-center">
+                <button id="menuBtn" class="lg:hidden material-symbols-outlined text-antique-gold text-3xl">menu</button>
+                <button class="hidden lg:flex items-center gap-3 text-[10px] font-bold tracking-[0.2em] text-white/30 hover:text-antique-gold transition-all uppercase group">
+                    <span class="material-symbols-outlined text-lg">search</span>
+                    <span class="border-b border-white/10 group-hover:border-antique-gold pb-1">Koleksiyonu Keşfet</span>
+                </button>
+            </div>
+            <div class="flex justify-end lg:justify-center">
+                <a class="flex flex-col items-center gap-1" href="../dubai_fistan_saray_ana_sayfa_tam_ba_lant_l/code.html">
+                    <span class="font-headline text-lg lg:text-title-lg tracking-[0.3em] text-antique-gold leading-none">DUBAI FISTAN SARAYI</span>
+                    <span class="text-[7px] lg:text-[8px] tracking-[0.6em] text-white/20 uppercase mt-1">Van • Dubai • Istanbul</span>
+                </a>
+            </div>
+            <div class="hidden lg:flex items-center justify-end gap-8">
+                <div class="flex gap-4">
+                    <span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">language</span>
+                    <span class="material-symbols-outlined cursor-pointer hover:scale-110 transition-transform">shopping_bag</span>
+                </div>
+            </div>
+        </nav>
+        <div id="mobileDrawer" class="mobile-menu hidden fixed inset-0 bg-black flex-col p-10 gap-8 animate-fade-in lg:hidden">
+            <div class="flex justify-end">
+                <button id="closeBtn" class="material-symbols-outlined text-white/40 text-4xl">close</button>
+            </div>
+            <div class="flex flex-col gap-8 mt-4">
+                <a href="../dubai_fistan_saray_ana_sayfa_tam_ba_lant_l/code.html" class="font-headline text-3xl text-white uppercase tracking-widest">Ana Sayfa</a>
+                <a href="../kuma_koleksiyonlar_fiyatl_ve_whatsapp_sipari_li_dubai_fistan_saray/code.html" class="font-headline text-3xl text-white uppercase tracking-widest">Kumaşlar</a>
+                <a href="../haz_r_giyim_ve_galeri_fiyatl_ve_whatsapp_sipari_li_dubai_fistan_saray/code.html" class="font-headline text-3xl text-white uppercase tracking-widest">Hazır Giyim</a>
+                <a href="../zel_dikim_ve_l_sistemi_dubai_fistan_saray/code.html" class="font-headline text-3xl text-white uppercase tracking-widest">Özel Dikim</a>
+                <a href="code.html" class="font-headline text-3xl text-antique-gold border-b border-antique-gold pb-2 uppercase tracking-widest">İletişim</a>
+            </div>
+        </div>
+    </header>
+
+    <header class="relative w-full h-[300px] lg:h-[400px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-[#0A0A0A] z-10"></div>
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa11fDNcfVOUTiH7EeKlsAyt5q9j6sWJuxjmXqR5tmilIUZUsAopHtmWhV6cs9V7tzYtms5RNkNW0d1VaLZj5rAQXGMWxs3G8afRhWDzXhKIM1y2-G6gvKq9icgZtLelooIsPotZ6bDgoLHnBJTUyNlAISj-A-ymUL8bpx_wfkz0aPz50cZIqaj-ed5lU6l6MWEplCcVMO1jGftrS2wFL--SQPklbs0BRXSHn4bpoi1jQ2yQwfUYMqfQiwvNPqNMfDnGbxOupw2w" class="absolute inset-0 w-full h-full object-cover opacity-30">
+        <div class="relative z-20 text-center px-10">
+            <h1 class="font-headline text-4xl lg:text-6xl text-antique-gold mb-2 uppercase">Bize Ulaşın</h1>
+            <p class="font-body text-white/40 uppercase tracking-[0.3em] text-[8px] lg:text-xs">Miras ve Zarafet Hikayemiz</p>
+        </div>
+    </header>
+
+    <main class="max-w-[1440px] mx-auto px-6 lg:px-10 py-12 lg:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+            <div class="glass-card flex flex-col items-center text-center space-y-4 p-8 lg:p-12">
+                <span class="material-symbols-outlined text-antique-gold text-4xl">location_on</span>
+                <h3 class="font-headline text-xl text-white">MAĞAZA KONUMU</h3>
+                <p class="text-white/40 text-sm">Lüks Butik Cad. No:12, Nişantaşı/İstanbul</p>
+            </div>
+            <div class="glass-card flex flex-col items-center text-center space-y-4 p-8 lg:p-12">
+                <span class="material-symbols-outlined text-antique-gold text-4xl">call</span>
+                <h3 class="font-headline text-xl text-white">BİZE ULAŞIN</h3>
+                <p class="text-white/40 text-sm">+90 212 000 00 00</p>
+            </div>
+            <div class="glass-card flex flex-col items-center text-center space-y-4 p-8 lg:p-12">
+                <span class="material-symbols-outlined text-antique-gold text-4xl">mail</span>
+                <h3 class="font-headline text-xl text-white">E-POSTA</h3>
+                <p class="text-white/40 text-sm">info@dubaifistansarayi.com</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black/20 border-t border-white/5 py-12 text-center mt-20">
+        <p class="text-[9px] text-white/20 uppercase tracking-[0.4em] font-bold">© 2024 DUBAI FISTAN SARAYI. TÜM HAKLARI SAKLIDIR.</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const drawer = document.getElementById('mobileDrawer');
+
+        menuBtn.addEventListener('click', () => drawer.classList.add('active'));
+        closeBtn.addEventListener('click', () => drawer.classList.remove('active'));
+    </script>
+</body>
+</html>

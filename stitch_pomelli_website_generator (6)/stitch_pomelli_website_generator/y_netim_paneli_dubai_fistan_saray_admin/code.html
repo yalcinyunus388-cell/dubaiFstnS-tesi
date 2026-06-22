@@ -1,0 +1,458 @@
+<!DOCTYPE html><html class="dark" lang="tr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Dubai Fistan Sarayı | Yönetim Paneli</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&amp;family=Manrope:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "antique-gold": "#C5A059",
+                        "surface-bright": "#393939",
+                        "on-surface": "#e2e2e2",
+                        "on-tertiary-fixed-variant": "#5c4215",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#261900",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#ffdeae",
+                        "muted-gold": "#8E6F3E",
+                        "on-surface-variant": "#d1c5b4",
+                        "on-tertiary": "#432c01",
+                        "tertiary-container": "#c3a06a",
+                        "silk-white": "#F4F4F4",
+                        "inverse-surface": "#e2e2e2",
+                        "primary": "#e9c176",
+                        "surface-tint": "#e9c176",
+                        "on-primary": "#412d00",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-variant": "#353535",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary": "#313030",
+                        "primary-container": "#c5a059",
+                        "surface": "#131313",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-container-highest": "#353535",
+                        "error": "#ffb4ab",
+                        "on-background": "#e2e2e2",
+                        "surface-container": "#1f1f1f",
+                        "on-secondary-container": "#b7b5b4",
+                        "primary-fixed": "#ffdea5",
+                        "surface-container-low": "#1b1b1b",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "background": "#131313",
+                        "inverse-on-surface": "#303030",
+                        "inverse-primary": "#775a19",
+                        "secondary": "#c8c6c5",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-tertiary-container": "#4f370a",
+                        "tertiary": "#e7c188",
+                        "secondary-container": "#474746",
+                        "tertiary-fixed-dim": "#e7c188",
+                        "primary-fixed-dim": "#e9c176",
+                        "on-primary-container": "#4e3700",
+                        "on-tertiary-fixed": "#281800",
+                        "outline": "#9a8f80",
+                        "surface-dim": "#131313",
+                        "deep-obsidian": "#0A0A0A",
+                        "error-container": "#93000a",
+                        "outline-variant": "#4e4639"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter-desktop": "32px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "title-lg": ["Manrope"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-lg-mobile": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e2e2e2;
+            -webkit-font-smoothing: antialiased;
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .glass-panel {
+            background: rgba(19, 19, 19, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(197, 160, 89, 0.1);
+        }
+        .sidebar-active {
+            color: #C5A059;
+            background: rgba(197, 160, 89, 0.05);
+            border-right: 2px solid #C5A059;
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-hidden">
+<div class="flex h-screen w-full">
+<!-- Sidebar Navigation -->
+<aside class="w-72 bg-surface-container-lowest border-r border-outline-variant/20 flex flex-col z-50">
+<div class="p-8">
+<h1 class="font-headline-md text-title-lg tracking-widest text-antique-gold mb-1">DUBAI FISTAN</h1>
+<p class="text-[10px] tracking-[0.3em] text-on-surface-variant font-label-md uppercase opacity-60">Yönetim Paneli</p>
+</div>
+<nav class="flex-1 px-4 space-y-1 overflow-y-auto scrollbar-hide">
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg sidebar-active transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">Genel Bakış</span>
+</a>
+<div class="pt-6 pb-2 px-4 text-[10px] uppercase tracking-[0.2em] text-outline opacity-50 font-bold">Katalog Yönetimi</div>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:text-antique-gold hover:bg-white/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="apparel">apparel</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">Ürünler</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:text-antique-gold hover:bg-white/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="texture">texture</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">Kumaşlar</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:text-antique-gold hover:bg-white/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="gallery_thumbnail">gallery_thumbnail</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">Galeri</span>
+</a>
+<div class="pt-6 pb-2 px-4 text-[10px] uppercase tracking-[0.2em] text-outline opacity-50 font-bold">Operasyon</div>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:text-antique-gold hover:bg-white/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">Siparişler</span>
+<span class="ml-auto bg-antique-gold text-surface px-2 py-0.5 rounded text-[10px] font-bold">12</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:text-antique-gold hover:bg-white/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="content_cut">content_cut</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">Özel Dikim</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:text-antique-gold hover:bg-white/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="straighten">straighten</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">Ölçü Kayıtları</span>
+</a>
+<div class="pt-6 pb-2 px-4 text-[10px] uppercase tracking-[0.2em] text-outline opacity-50 font-bold">Sistem</div>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:text-antique-gold hover:bg-white/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings_suggest">settings_suggest</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">SEO Ayarları</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant hover:text-antique-gold hover:bg-white/5 transition-all group" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="group">group</span>
+<span class="font-label-md text-label-md tracking-wider uppercase">Kullanıcılar</span>
+</a>
+</nav>
+<div class="p-6 border-t border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-antique-gold/30 bg-surface-container flex items-center justify-center text-antique-gold font-bold">
+                        AD
+                    </div>
+<div>
+<p class="text-on-surface text-sm font-bold">Admin Panel</p>
+<p class="text-on-surface-variant text-[10px] uppercase tracking-tighter">Süper Yetkili</p>
+</div>
+<button class="ml-auto text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col min-w-0 overflow-hidden bg-background">
+<!-- Header -->
+<header class="h-20 glass-panel flex items-center justify-between px-margin-desktop sticky top-0 z-40">
+<div class="flex items-center gap-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">Genel Bakış</h2>
+<div class="h-4 w-px bg-outline-variant/30"></div>
+<p class="text-on-surface-variant font-label-md text-label-md tracking-widest uppercase">Bugün: 24 Mayıs 2024</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-antique-gold" data-icon="search">search</span>
+</div>
+<div class="relative group">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-antique-gold" data-icon="notifications">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-error rounded-full ring-2 ring-background"></span>
+</div>
+<button class="bg-antique-gold text-surface px-6 py-2.5 font-label-md text-label-md uppercase tracking-widest hover:scale-105 transition-transform">
+                        Yeni Ürün Ekle
+                    </button>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-margin-desktop space-y-gutter-desktop scrollbar-hide">
+<!-- Quick Stats Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-gutter-desktop">
+<div class="bg-surface-container border border-outline-variant/20 p-6 flex flex-col gap-2 group hover:border-antique-gold/50 transition-colors">
+<span class="text-[10px] font-bold text-antique-gold tracking-[0.2em] uppercase">Toplam Ciro</span>
+<div class="flex items-end justify-between">
+<h3 class="text-2xl font-headline-md text-on-surface">₺485.200</h3>
+<span class="text-emerald-400 text-xs flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+                                %12
+                            </span>
+</div>
+<div class="mt-4 h-1 w-full bg-surface-variant overflow-hidden">
+<div class="h-full bg-antique-gold w-3/4"></div>
+</div>
+</div>
+<div class="bg-surface-container border border-outline-variant/20 p-6 flex flex-col gap-2 group hover:border-antique-gold/50 transition-colors">
+<span class="text-[10px] font-bold text-antique-gold tracking-[0.2em] uppercase">Aktif Siparişler</span>
+<div class="flex items-end justify-between">
+<h3 class="text-2xl font-headline-md text-on-surface">42</h3>
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest">Bekleyen</span>
+</div>
+<div class="mt-4 flex -space-x-2">
+<div class="w-6 h-6 rounded-full border border-background bg-surface-variant"></div>
+<div class="w-6 h-6 rounded-full border border-background bg-surface-variant"></div>
+<div class="w-6 h-6 rounded-full border border-background bg-antique-gold/20 flex items-center justify-center text-[8px] font-bold">+39</div>
+</div>
+</div>
+<div class="bg-surface-container border border-outline-variant/20 p-6 flex flex-col gap-2 group hover:border-antique-gold/50 transition-colors">
+<span class="text-[10px] font-bold text-antique-gold tracking-[0.2em] uppercase">Özel Dikim Talebi</span>
+<div class="flex items-end justify-between">
+<h3 class="text-2xl font-headline-md text-on-surface">18</h3>
+<span class="text-antique-gold text-xs font-bold uppercase tracking-widest">Yeni</span>
+</div>
+<div class="mt-4 text-[10px] text-on-surface-variant italic">Son talep 15 dk önce alındı</div>
+</div>
+<div class="bg-surface-container border border-outline-variant/20 p-6 flex flex-col gap-2 group hover:border-antique-gold/50 transition-colors">
+<span class="text-[10px] font-bold text-antique-gold tracking-[0.2em] uppercase">Müşteri Memnuniyeti</span>
+<div class="flex items-end justify-between">
+<h3 class="text-2xl font-headline-md text-on-surface">%98.4</h3>
+<div class="flex text-antique-gold">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill">star</span>
+</div>
+</div>
+<div class="mt-4 text-[10px] text-on-surface-variant uppercase tracking-widest">2.400+ Geri bildirim</div>
+</div>
+</section>
+<!-- Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-desktop">
+<!-- Table Section (Orders) -->
+<section class="lg:col-span-2 bg-surface-container border border-outline-variant/20">
+<div class="p-8 border-b border-outline-variant/10 flex justify-between items-center">
+<h3 class="font-headline-md text-title-lg text-on-surface">Son Siparişler</h3>
+<button class="text-[10px] font-bold text-antique-gold tracking-[0.2em] uppercase border-b border-antique-gold/30 hover:border-antique-gold transition-colors pb-1">Tümünü Gör</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-[10px] text-on-surface-variant uppercase tracking-[0.2em] border-b border-outline-variant/10">
+<th class="px-8 py-5 font-bold">Müşteri</th>
+<th class="px-8 py-5 font-bold">Ürün</th>
+<th class="px-8 py-5 font-bold">Tutar</th>
+<th class="px-8 py-5 font-bold">Durum</th>
+<th class="px-8 py-5 font-bold"></th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr class="border-b border-outline-variant/5 hover:bg-white/[0.02] transition-colors">
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Amina Al-Fayed</span>
+<span class="text-xs text-on-surface-variant">#DXB-9021</span>
+</div>
+</td>
+<td class="px-8 py-6 text-on-surface-variant">Zümrüt Yeşili Kaftan</td>
+<td class="px-8 py-6 font-bold text-antique-gold">₺14.500</td>
+<td class="px-8 py-6">
+<span class="inline-block px-3 py-1 bg-antique-gold/10 text-antique-gold text-[10px] font-bold uppercase tracking-wider rounded">Hazırlanıyor</span>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-on-surface" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/5 hover:bg-white/[0.02] transition-colors">
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Zeynep Yılmaz</span>
+<span class="text-xs text-on-surface-variant">#DXB-8834</span>
+</div>
+</td>
+<td class="px-8 py-6 text-on-surface-variant">İpek Saten Fistan</td>
+<td class="px-8 py-6 font-bold text-antique-gold">₺8.200</td>
+<td class="px-8 py-6">
+<span class="inline-block px-3 py-1 bg-emerald-400/10 text-emerald-400 text-[10px] font-bold uppercase tracking-wider rounded">Kargoda</span>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-on-surface" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/5 hover:bg-white/[0.02] transition-colors">
+<td class="px-8 py-6">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">Maryam Rashid</span>
+<span class="text-xs text-on-surface-variant">#DXB-8722</span>
+</div>
+</td>
+<td class="px-8 py-6 text-on-surface-variant">Altın Nakışlı Abiye</td>
+<td class="px-8 py-6 font-bold text-antique-gold">₺22.000</td>
+<td class="px-8 py-6">
+<span class="inline-block px-3 py-1 bg-white/5 text-on-surface-variant text-[10px] font-bold uppercase tracking-wider rounded">Tamamlandı</span>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-on-surface" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Custom Tailoring / Measurements -->
+<section class="space-y-gutter-desktop">
+<div class="bg-surface-container border border-outline-variant/20 p-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[80px]" data-icon="straighten">straighten</span>
+</div>
+<h3 class="font-headline-md text-title-lg text-on-surface mb-2">Ölçü Kayıtları</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Yeni bir özel dikim talebi için ölçü girişi yapın veya mevcut kayıtları güncelleyin.</p>
+<button class="w-full border border-antique-gold text-antique-gold py-3 font-label-md text-label-md uppercase tracking-[0.2em] hover:bg-antique-gold hover:text-surface transition-all">
+                                Ölçü Girişi Yap
+                            </button>
+</div>
+<div class="bg-deep-obsidian border border-outline-variant/20 p-8">
+<h3 class="font-headline-md text-title-lg text-on-surface mb-6">Galeri Yönetimi</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square bg-surface-container relative group cursor-pointer overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A luxurious close-up photography of golden silk fabric with intricate hand-embroidered patterns, captured in low moody lighting for a high-end boutique aesthetic. Deep shadows and glowing highlights emphasize the premium textile quality of a Dubai boutique atelier." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDf5gXA0g25xeE23HlSigkEqX0-HICCBi-AU_LtgtBtFLWYia5l0_ORLCBvYDfHhHEPVWw49tbRHdMW_Z4D6HnZlYKn8usmS4rLG0e_VmG5aTY3-Dn3trYV1nwzKQVu2y_PhKS4mEyprhiefsfboJ5Rt2ZPBZPuOi56QqK6V7xCmDFbFcyrJYnPsO8vd_qzZf9d7g_fovi16xtsZ7PojrTP-Aql0cjWTfB2mbangVZkrm0XlsVc0_ly0xtvCTWwMXAI94VP2DSmCQ')"></div>
+<div class="absolute inset-0 bg-antique-gold/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="edit">edit</span>
+</div>
+</div>
+<div class="aspect-square bg-surface-container relative group cursor-pointer overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Macro detail of deep obsidian velvet fabric with silver beadwork, reflecting soft ambient light in a dark minimalist studio. The focus is sharp on the craftsmanship of the embroidery, showcasing the luxury and exclusivity of high-fashion evening wear from Dubai." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGDGey9ABhUeTpYw473XVoqXvn0uIYl4tQq5SRBhBVhp4hFAnIf7NVaLDez_0acqG9dojwtOL_Pgq7U0b-MHfQz9yf5C0XDAkr83wJtdbWokKh2hfLDDdn3K22wdMsr6qg6PrLzive09GX5ewNvm_vNviAaDTqkc4Z7gfTfUce6Onqoxix3jKmTk1ZaBMYHCNb6aP7VPxZuIiWal_Lt3O7zYCiMPwQ3X8YrHxL8zmiZaqQRuyrpKl0birJJL4SG0isOWtJUFPJdw')"></div>
+<div class="absolute inset-0 bg-antique-gold/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="edit">edit</span>
+</div>
+</div>
+<div class="aspect-square bg-surface-container relative group cursor-pointer overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Cinematic wide shot of a luxury boutique interior in Dubai, featuring elegant mannequins dressed in flowing emerald and gold kaftans. The architecture is minimalist with dark marble floors and warm golden accent lighting, creating an atmosphere of affluent serenity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClGd9WeIBlcDPiMcSuGS9FkSDge344pXtb8x_grGokBYkYU3klhn3o2ZdXfjJhlJIDM_0pFu6omaLyi4ZSTDVb3Ljwena364Yb0uHS31RMocsDuhnBuEDXw5gpmEUps46ZQZlpygIxD2O_A6HVMcuL6a2L_RLOdF8PzlwZA378nQZpa6emrMOx4rvmUVJBMQ6S2rGEAter_h2pysa2k-CT_0P9RiEUzbo2ufV8BhN080pjB7RyaDIffuQi3q1wkcjeLsBO9AD2eA')"></div>
+<div class="absolute inset-0 bg-antique-gold/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white" data-icon="edit">edit</span>
+</div>
+</div>
+<div class="aspect-square bg-surface-container-low border-2 border-dashed border-outline-variant/30 flex items-center justify-center group hover:border-antique-gold/50 transition-colors cursor-pointer">
+<div class="text-center">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-antique-gold" data-icon="add_a_photo">add_a_photo</span>
+<p class="text-[10px] text-outline-variant mt-2 uppercase tracking-widest group-hover:text-antique-gold">Ekle</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer-like System Status Bar -->
+<footer class="flex items-center justify-between py-6 border-t border-outline-variant/20 text-on-surface-variant text-[10px] tracking-[0.2em] uppercase font-bold">
+<div class="flex gap-8">
+<span class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+                            Sunucu Durumu: Aktif
+                        </span>
+<span>Veritabanı: DXB-CLOUD-1</span>
+</div>
+<div class="flex gap-8">
+<a class="hover:text-antique-gold transition-colors" href="#">Destek</a>
+<a class="hover:text-antique-gold transition-colors" href="#">Dökümantasyon</a>
+<span>v2.4.0-Stable</span>
+</div>
+</footer>
+</div>
+</main>
+</div>
+<!-- Modals & Overlays (Simulated State) -->
+<div class="fixed inset-y-0 right-0 w-[450px] bg-deep-obsidian border-l border-antique-gold/20 shadow-2xl transform translate-x-full transition-transform duration-500 z-[100] hidden" id="seo-drawer">
+<div class="p-10 h-full flex flex-col">
+<div class="flex items-center justify-between mb-12">
+<h3 class="font-headline-md text-headline-md text-antique-gold">SEO Ayarları</h3>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-on-surface transition-colors" data-icon="close" onclick="toggleDrawer()">close</button>
+</div>
+<div class="flex-1 space-y-10 overflow-y-auto scrollbar-hide">
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-antique-gold uppercase tracking-[0.2em]">Meta Başlık (Global)</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 text-on-surface py-3 px-0 focus:ring-0 focus:border-antique-gold transition-colors" type="text" value="Dubai Fistan Sarayı | Premium Kumaş &amp; Özel Dikim">
+</div>
+<div class="space-y-2">
+<label class="text-[10px] font-bold text-antique-gold uppercase tracking-[0.2em]">Meta Açıklama</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/30 text-on-surface py-3 px-0 focus:ring-0 focus:border-antique-gold transition-colors resize-none" rows="4">Dubai'nin en kaliteli kumaşları ve usta ellerden çıkan özel dikim fistan modelleri ile zerafetinizi taçlandırın. Lüks fistan ve kaftan koleksiyonumuzu keşfedin.</textarea>
+</div>
+<div class="space-y-4">
+<label class="text-[10px] font-bold text-antique-gold uppercase tracking-[0.2em]">Anahtar Kelimeler</label>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high border border-antique-gold/20 text-xs text-antique-gold flex items-center gap-2">Dubai Fistan <span class="material-symbols-outlined text-[12px] cursor-pointer" data-icon="close">close</span></span>
+<span class="px-3 py-1 bg-surface-container-high border border-antique-gold/20 text-xs text-antique-gold flex items-center gap-2">Özel Dikim <span class="material-symbols-outlined text-[12px] cursor-pointer" data-icon="close">close</span></span>
+<span class="px-3 py-1 bg-surface-container-high border border-antique-gold/20 text-xs text-antique-gold flex items-center gap-2">Lüks Kumaş <span class="material-symbols-outlined text-[12px] cursor-pointer" data-icon="close">close</span></span>
+<button class="px-3 py-1 border border-dashed border-outline-variant text-xs text-on-surface-variant">+ Ekle</button>
+</div>
+</div>
+</div>
+<div class="pt-10">
+<button class="w-full bg-antique-gold text-surface py-4 font-label-md text-label-md uppercase tracking-[0.3em] font-bold shadow-lg hover:brightness-110 transition-all">
+                    Değişiklikleri Kaydet
+                </button>
+</div>
+</div>
+</div>
+<script>
+        // Simple logic for interactive elements
+        function toggleDrawer() {
+            const drawer = document.getElementById('seo-drawer');
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+                setTimeout(() => {
+                    drawer.classList.remove('translate-x-full');
+                }, 10);
+            } else {
+                drawer.classList.add('translate-x-full');
+                setTimeout(() => {
+                    drawer.classList.add('hidden');
+                }, 500);
+            }
+        }
+
+        // Mapping sidebar SEO link to drawer
+        document.querySelectorAll('nav a').forEach(link => {
+            if (link.textContent.includes('SEO')) {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    toggleDrawer();
+                });
+            }
+        });
+    </script>
+</body></html>

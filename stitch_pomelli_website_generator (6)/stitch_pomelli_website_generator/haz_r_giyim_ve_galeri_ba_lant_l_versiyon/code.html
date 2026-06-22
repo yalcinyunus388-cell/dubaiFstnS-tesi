@@ -1,0 +1,325 @@
+<!DOCTYPE html><html class="dark" lang="tr"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Dubai Fistan Sarayı | Hazır Giyim &amp; Galeri</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            color: #C5A059;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 10, 0.7);
+        }
+        .zoom-container:hover .zoom-image {
+            transform: scale(1.15);
+        }
+        .zoom-image {
+            transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+        .shimmer-gold {
+            background: linear-gradient(90deg, rgba(197,160,89,0) 0%, rgba(197,160,89,0.2) 50%, rgba(197,160,89,0) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #C5A059; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "antique-gold": "#C5A059",
+                        "deep-obsidian": "#0A0A0A",
+                        "surface": "#131313",
+                        "primary": "#e9c176",
+                        "on-surface-variant": "#d1c5b4",
+                        "outline-variant": "#4e4639",
+                        "background": "#131313",
+                        "surface-container-lowest": "#0e0e0e"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter-desktop": "32px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Libre Caslon Text"],
+                        "title-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-md": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-antique-gold/30">
+<!-- TopNavBar -->
+<nav class="bg-background/80 backdrop-blur-md dark:bg-background/80 docked full-width top-0 sticky z-50 border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-title-lg tracking-widest text-antique-gold dark:text-primary">
+                DUBAI FISTAN SARAYI
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md tracking-[0.2em] uppercase text-on-surface-variant hover:text-antique-gold transition-colors duration-300" href="#">KUMAŞLAR</a>
+<a class="font-label-md text-label-md tracking-[0.2em] uppercase text-on-surface-variant hover:text-antique-gold transition-colors duration-300" href="#">ÖZEL DİKİM</a>
+<a class="font-label-md text-label-md tracking-[0.2em] uppercase text-antique-gold border-b-2 border-antique-gold pb-1" href="#">HAZIR GİYİM</a>
+<a class="font-label-md text-label-md tracking-[0.2em] uppercase text-on-surface-variant hover:text-antique-gold transition-colors duration-300" href="#">GALERİ</a>
+<a class="font-label-md text-label-md tracking-[0.2em] uppercase text-on-surface-variant hover:text-antique-gold transition-colors duration-300" href="#">İLETİŞİM</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:scale-105 transition-transform">language</span>
+<span class="material-symbols-outlined cursor-pointer hover:scale-105 transition-transform">shopping_bag</span>
+</div>
+<button class="hidden md:block bg-antique-gold text-deep-obsidian font-label-md px-6 py-2 hover:scale-105 transition-transform duration-200">
+                    RANDEVU AL
+                </button>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Header Section -->
+<header class="mb-16 text-center max-w-3xl mx-auto">
+<h1 class="font-headline-md text-5xl text-antique-gold mb-6">Hazır Elbiseler</h1>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                Atölyemizin usta ellerinden çıkan, her detayı titizlikle işlenmiş hazır koleksiyonlarımızı keşfedin. Nişanlıktan yöresel fistanlara kadar geniş yelpazemizle zarafetinizi taçlandırın.
+            </p>
+</header>
+<!-- Category Filter -->
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="border border-antique-gold bg-antique-gold text-black px-8 py-2 font-label-md tracking-wider uppercase text-sm">TÜMÜ</button>
+<button class="border border-outline-variant/30 text-on-surface-variant px-8 py-2 font-label-md tracking-wider uppercase text-sm hover:border-antique-gold transition-colors">NİŞANLIK</button>
+<button class="border border-outline-variant/30 text-on-surface-variant px-8 py-2 font-label-md tracking-wider uppercase text-sm hover:border-antique-gold transition-colors">KINA ELBİSESİ</button>
+<button class="border border-outline-variant/30 text-on-surface-variant px-8 py-2 font-label-md tracking-wider uppercase text-sm hover:border-antique-gold transition-colors">DÜĞÜN ELBİSESİ</button>
+<button class="border border-outline-variant/30 text-on-surface-variant px-8 py-2 font-label-md tracking-wider uppercase text-sm hover:border-antique-gold transition-colors">YÖRESEL FİSTAN</button>
+</div>
+<!-- Instagram-style Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-24">
+<!-- Product Card 1 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-deep-obsidian cursor-pointer zoom-container" onclick="openModal('product-1')">
+<img class="w-full h-full object-cover zoom-image opacity-80 group-hover:opacity-100" data-alt="A high-end luxury bridal gown displayed in a minimalist boutique setting. The dress features intricate lace detailing and a long train, illuminated by soft golden spotlighting. The background is a deep obsidian wall with subtle texture, reflecting the affluent serenity of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3DKDB73hk01sJ4HiymzuMPfVql6gIkY3gHI0e7eGSznExSOYf9kbSJsdkMBFXQZlRQrf6TtQluJWtBnAMyZPNND278fvpHCFAs8CH4Oawgl6Oij6r_o6hpo5jcYQ19sBpPAScZ1129hmIzflDzvQVFkdwR1mtJzsN9SoCauAt3ouyNQYClI4Jvh8OnwNPFTLI12wljMUfSUMgjyxS596ZkUJeYe5JkiZhdopRrHylWV9ETzswkwzUBwGuarSf3fUKiU2oFyAHZw">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-antique-gold font-label-md text-xs tracking-widest mb-2">DÜĞÜN ELBİSESİ</span>
+<h3 class="font-headline-md text-xl text-white">Zümrüt Gelinlik</h3>
+<div class="mt-4 h-px w-full bg-antique-gold/30"></div>
+<span class="mt-2 font-label-md text-antique-gold">İNCELE</span>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-deep-obsidian cursor-pointer zoom-container">
+<img class="w-full h-full object-cover zoom-image opacity-80 group-hover:opacity-100" data-alt="A traditional Yöresel Fistan dress in deep crimson velvet with ornate gold embroidery. The fabric has a rich tactile texture captured in macro detail. The lighting is dramatic, coming from the side to emphasize the three-dimensional threadwork. Dark minimalist luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBColLPYQBwpd7_ZOqTr7fU2kZ6qFuSDnXmCj67Iickz-ERwsOoYgxyVRks55n3Su3vUlLP5FqaixbeGEyLdWdWBxVlfJwOBShJ-MlsD0M4qhSE73WVQTP6n9CNskHMDZAV2MYsADDlvai_jS8zOWzToO-2Or4sR6vq8DroO4HlO6Od4T_hcOaBQO0NuZMiM_Zg93wpidV1tNrqdzDza1ojF4uqVTKGpt_45nqaLV59vRJRi9sVQmYYq0vdGw-hYn8jrLDLinHpCw">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-antique-gold font-label-md text-xs tracking-widest mb-2">YÖRESEL FİSTAN</span>
+<h3 class="font-headline-md text-xl text-white">Saray Sultanı</h3>
+<div class="mt-4 h-px w-full bg-antique-gold/30"></div>
+<span class="mt-2 font-label-md text-antique-gold">İNCELE</span>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-deep-obsidian cursor-pointer zoom-container">
+<img class="w-full h-full object-cover zoom-image opacity-80 group-hover:opacity-100" data-alt="An elegant evening engagement dress in champagne silk. The silhouette is sleek and modern with architectural lines. It's set against a dark charcoal background with a subtle shimmer effect. The lighting is high-key, creating a luminous and exclusive atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5k1-u55OXV_4EPl4MMEsuxvKa96zwDfGUB2KVsPiplygI6mo2BO8NTIBro8jagfZ5sY-PEcbrxnojG45lm8Del2XQWtvUoY1lRKUNOjDevbjmrDm26AUg_m8FK-ODIB4HAaMRspKVaB_6tFZA-Mql-c4wtE-b1kOcqbwa2_4GZhl7-RUZESyUaZo8VV1rMtWUXpgkzhyl9420FYCsarZluVIJe4y8j_5lLuvY5FLftulXH_3Gfz4iePLEChH6Zog1lNuRtlUt0A">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-antique-gold font-label-md text-xs tracking-widest mb-2">NİŞANLIK</span>
+<h3 class="font-headline-md text-xl text-white">İnci Işıltısı</h3>
+<div class="mt-4 h-px w-full bg-antique-gold/30"></div>
+<span class="mt-2 font-label-md text-antique-gold">İNCELE</span>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative aspect-[3/4] overflow-hidden bg-deep-obsidian cursor-pointer zoom-container">
+<img class="w-full h-full object-cover zoom-image opacity-80 group-hover:opacity-100" data-alt="A vibrant purple Kına Elbisesi with heavy gold beadwork on the bodice. The dress is captured in a cinematic pose with a slightly blurred atelier background. The gold accents feel substantial and metallic. Luxury minimalist framing with expansive negative space around the garment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_R4Rf7-YZs5VcqYyRcYc5W30GIEHURKGcMmQusFY2W01l1DObT7cJoCOLDwZCn2gzWTcnRuhxGKodoNNavkIanN8du9AEz1FncCIkMsqD1EUECCtZnHjUkmVk9qbJe57cFLEjL8AmSPQdny4-O0dSTagoph6wOQOy4pmJuD1BijEyLbqE8hDy-r1DGTHvM5CuSrKcaFnpcRrJ-An54o2Ijjq-wtt8HolRVaGUJG030lc2Ku6swGbgnfw6Wir8-YCmsoD1123AiA">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+<span class="text-antique-gold font-label-md text-xs tracking-widest mb-2">KINA ELBİSESİ</span>
+<h3 class="font-headline-md text-xl text-white">Yıldız Gecesi</h3>
+<div class="mt-4 h-px w-full bg-antique-gold/30"></div>
+<span class="mt-2 font-label-md text-antique-gold">İNCELE</span>
+</div>
+</div>
+</div>
+<!-- Video Gallery & Social Proof Section -->
+<section class="mb-24">
+<div class="flex justify-between items-end mb-12 border-b border-outline-variant/30 pb-6">
+<div>
+<h2 class="font-headline-md text-4xl text-antique-gold">Sizden Gelenler</h2>
+<p class="font-body-md text-on-surface-variant mt-2">Müşterilerimizin en mutlu anlarına ortak oluyoruz.</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer border border-antique-gold p-2">arrow_back</span>
+<span class="material-symbols-outlined cursor-pointer border border-antique-gold p-2">arrow_forward</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square relative group overflow-hidden bg-surface">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A happy customer in a Dubai Fistan Sarayı wedding dress, posing in a lush garden during a sunset. The lighting is warm and golden, highlighting the dress's flow. High-quality photography with a cinematic feel and shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHQvORD6EMoCc6m-p9sNkN7bqimraUR5rEZCfjPTgWXpJJFdv6mq0_JztV40_1xEda1ReVpi-HxQzW8vuyT8WsRBALn1i1jyPwi48u2jm2YXeh9txgh0bya_RtRh7VsceB7HJkSIKFy3jJSQVpe50SM8kIz4-qf2qx9nwzR-ClbVtXi2oR0BQGV9nhT-8ioEUQSCk1tSvw3SfQTmsgMCcXQbWD_3_Nf0jdf8tRlgWyqMt_VAk8RDtCrBw4YMqjvUqFwEximTPiEQ">
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-4xl">play_circle</span>
+</div>
+</div>
+<div class="aspect-square relative group overflow-hidden bg-surface">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Interior of a luxury atelier with mannequins wearing ornate traditional fistan dresses. The lighting is focused on the embroidery. The mood is affluent serenity, emphasizing craftsmanship and heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMyNUd5GOIbWmmV6fArzrdjWjKMFFXdHG3jlx1c3yODxHOfP-0249g3cc4W06AEFW_ANRqM58_q5NjHkI7TbB4oGisZ_C0qx0tN7XL9PTgdmYTsEB7vD4Ku0AOdh4DuQQCya4TJk9glW3N_VUz5SWj9VTrXae1Z_LYQ5SgP5zoDfstQAr19JXHzatELuTRhjZtld1z90c9OMzChnYGt1IN9AjZizLeWk1D8hs-6p6AaRV9-9f5s-biwaBmK_tJhvFBohVuwtdW0A">
+</div>
+<div class="aspect-square relative group overflow-hidden bg-surface">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A close-up video still of a customer's hands touching the premium fabric of a gown. The golden threadwork is shimmering under soft boutique lights. Minimalist and tactile visual narrative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBna3Fk13yLxjh4WJ3EM4SgUE02n84Hy8ieraDgxi9d7PhusvVCmEcHUUKYbnEnrDWxDaW8Bs-HQNga7qdw759xHAqbItPKRzc_51d9QO9xf_Km2vrcZwWEPUYVUPiTifN8vvAannuquxFiqqYhFIY6blhf04TJXX1KrQ-2y0rDLuFNmEH6vjtv8NLEwL99Vs6W6wsy8xsB12xNSCFQR3pf5i8zgsrctBVBIhSUAlAfQNpm2w7KSKo2eynTqg38AQ2gHnBDVYLrig">
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-4xl">play_circle</span>
+</div>
+</div>
+<div class="aspect-square relative group overflow-hidden bg-surface">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A customer twirling in a large salon, wearing a voluminous henna dress. The motion creates a beautiful blur effect on the fabric. High-contrast boldness with deep blacks and luminous gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChmn622MSXQuDJJl7sCKP2zcmpXnzks0a4SlhlVKpZiRL_NDuvz_L7V3Z6HwKJsujqTInfOI6acKVM303UsDtE73OWE13WY4OhkrrhjHrcgQPs1Rk0MAnzjJf13d2NaQGtcuRQ7LxQcrTdPGltVhn4uRCHYgSevTttMBuCES0R3IY307HEc7mLI0agQOHiLGIW-Qynvu-Zek8exGGX-WX6aEHMYXbvLOS5c7DyVr13YhMWRn9tesHsdPq8zVocsuGkBTJrDdtWQA">
+</div>
+</div>
+</section>
+</main>
+<!-- Product Modal / Detail Simulation -->
+<div class="fixed inset-0 z-[60] hidden bg-black/95 backdrop-blur-xl flex items-center justify-center overflow-y-auto p-4 md:p-8" id="productModal">
+<button class="absolute top-8 right-8 text-antique-gold z-[70]" onclick="closeModal()">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<div class="max-w-container-max w-full grid grid-cols-1 lg:grid-cols-2 gap-12 bg-deep-obsidian p-8 border border-outline-variant/20 relative">
+<div class="shimmer-gold absolute inset-0 pointer-events-none opacity-20"></div>
+<!-- Gallery Simulation -->
+<div class="space-y-4">
+<div class="aspect-[3/4] overflow-hidden bg-surface relative">
+<img class="w-full h-full object-cover zoom-image" data-alt="Macro detail of luxury fabric featuring golden embroidery and silk textures. The lighting highlights the tactile quality of the 'premium kumaş'. Sharp architectural lines and high-resolution focus." id="mainModalImg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Oj2l63umhgL22JLVJC2Umj1y_wnb3ivS9PGb6jUQkP67SsG5XwjJyMuutLZoXNFz6PRj-Sr0bflYclzZFWRLjtUhmPQf0lWT8inHwa5kaazrpWMNmQw2JAz5ewBGLJdWhdylYacnGqlFKy6myKNE8T8SMHL_xVjLed9fdP3qAg_PG35m0M907IPHvP-AWnUUqwNwxPJZXyh0N0N0fxQidNJu_Lbgrqo6rHcx15Rze5gyAwTlicb4xnxhq6KOFPTtQhs3DHH0KQ">
+<div class="absolute bottom-4 right-4 bg-black/50 p-2 backdrop-blur-md border border-antique-gold/30">
+<span class="material-symbols-outlined text-antique-gold">zoom_in</span>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square bg-surface cursor-pointer border border-antique-gold">
+<img class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity" data-alt="Side profile view of an elegant gown on a mannequin, emphasizing the architectural silhouette and fine tailoring. Luxury minimalist boutique backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjofOX-ywZJi38p8nwvjMiLKK0-adbHTKhgGpPqP87tpMWBmWsqAIpmOwlxJNQEjw5RH5Mwl_IttwsTmS6iRmy7SsXsqz5vwX_nIcftorJWWCGCBXEA8WPmGnQ27_h6ZVhHaU7E6odAzdmEfDgIi_yIvIsf0b1bSvOXRQoqFZIKx3m9D8oh2ARuGnoho9jSDz8xWl3XEv9RiubdCpdFE-rZ3yxAZnUvrWDVY4-bxgFqMMjayAG7tc1GCujqkI8ktFcLgpBSwlH1Q">
+</div>
+<div class="aspect-square bg-surface cursor-pointer border border-outline-variant/20">
+<img class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity" data-alt="Detail shot of the back of a wedding dress with delicate button fastenings and lace overlays. Luminous and substantial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_tammISIypF3h7MtVnrg_TIkvjwrvml3UsnXptEQGBY9QGKF4inidBeNLMBECBfnlQ3wHMG6MEw6jkSimsfwOfGnpKiChrwbRyCtxO6ET8A2TQt8UkGRWBvXo_u0yhrJ4ZcEdCEojPp9IxeLw1eiBWg9gqd6JJar8EDvlU77Q23O5BnmWi57aETFpf4s135i7t4TOZszOxCA9zKUqwxTdBU-ctM2xhX3JqJlbsz9OgGGrdf-PK__muggI0cuN3Kt1q6RswJ0uGQ">
+</div>
+<div class="aspect-square bg-surface cursor-pointer border border-outline-variant/20">
+<img class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity" data-alt="Customer photo of the dress being worn in a real-world celebration setting. Joyful and elegant atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBQMXoitQQK1AMAU0rVp6PvdGj3ppuGe6q56AXWtZDuMq-rP7DXWZIp_-UpSz0THGT5PsK21iEECjIuZBrogauA_KP57MN6l0k9ZhMvW886LwJiIZtaamttjTyhG3r4OZuHVpZGxlfh0dEix-sKix4frSX_oW2oFwVyl31fXShmU3UqT_kdOO_ZlZJa0l-DCzErA8rTMW6oiu2cXZSMXOb2KpqcD1ghMBVQW7lYVZHQWr6gE6N6vmDhKkGND4VdN_3-hSlsYrKAA">
+</div>
+<div class="aspect-square bg-surface border border-outline-variant/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-antique-gold">play_circle</span>
+</div>
+</div>
+</div>
+<!-- Configuration & Simulation -->
+<div class="flex flex-col justify-center">
+<span class="text-antique-gold font-label-md tracking-widest text-sm mb-4 uppercase">Özel Koleksiyon</span>
+<h2 class="font-headline-md text-5xl mb-6">Zümrüt Gelinlik</h2>
+<p class="font-body-md text-on-surface-variant mb-8 leading-relaxed">
+                    Usta ellerin el işçiliği ile bezenmiş, özel dokuma ipek kumaş ve Fransız danteli detaylarıyla tasarlanan bu eşsiz parça, hayatınızın en özel gününde sizi bir kraliçe gibi hissettirecek.
+                </p>
+<div class="space-y-8">
+<!-- Size Simulation -->
+<div>
+<label class="font-label-md text-xs tracking-widest text-antique-gold uppercase block mb-4">Beden Seçimi Simülasyonu</label>
+<div class="flex gap-4">
+<button class="w-12 h-12 border border-outline-variant/50 flex items-center justify-center font-label-md hover:border-antique-gold hover:text-antique-gold transition-all">36</button>
+<button class="w-12 h-12 border border-antique-gold bg-antique-gold text-black flex items-center justify-center font-label-md">38</button>
+<button class="w-12 h-12 border border-outline-variant/50 flex items-center justify-center font-label-md hover:border-antique-gold hover:text-antique-gold transition-all">40</button>
+<button class="w-12 h-12 border border-outline-variant/50 flex items-center justify-center font-label-md hover:border-antique-gold hover:text-antique-gold transition-all">42</button>
+</div>
+<p class="text-xs text-on-surface-variant/60 mt-2 font-body-md italic">* Ölçülerinizden emin değil misiniz? Uzman terzimizle görüşün.</p>
+</div>
+<div class="flex flex-col gap-4">
+<button class="w-full bg-antique-gold text-black py-5 font-label-md tracking-[0.2em] uppercase hover:bg-primary transition-colors">ŞİMDİ RANDEVU AL</button>
+<button class="w-full border border-antique-gold text-antique-gold py-5 font-label-md tracking-[0.2em] uppercase hover:bg-antique-gold hover:text-black transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">chat</span> WHATSAPP İLE SORUN
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky WhatsApp Button -->
+<a class="fixed bottom-10 right-10 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform group" href="https://wa.me/900000000000">
+<div class="absolute -top-12 right-0 bg-white text-black px-4 py-2 rounded-lg text-sm font-label-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+            Bizimle İletişime Geçin
+        </div>
+<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.404.836 2.943 1.277 4.513 1.277 4.957 0 8.993-4.037 8.995-8.996.001-2.401-.933-4.661-2.628-6.356-1.696-1.696-3.955-2.63-6.357-2.63-4.958 0-8.991 4.032-8.994 8.995-.001 1.637.43 3.23 1.251 4.636l-.995 3.635 3.715-.974zm11.233-5.341c-.301-.15-1.78-.879-2.056-.979-.275-.1-.476-.15-.676.15-.2.3-.775.979-.95 1.179-.175.2-.35.225-.65.075-.3-.15-1.268-.467-2.414-1.49-.893-.797-1.495-1.781-1.67-2.081-.175-.3-.018-.462.13-.61.135-.133.301-.35.451-.525.151-.175.201-.3.301-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.631-.926-2.231-.244-.582-.493-.504-.676-.513-.175-.008-.375-.01-.575-.01-.2 0-.525.075-.8.375-.275.3-1.05 1.026-1.05 2.503 0 1.478 1.075 2.903 1.225 3.103.15.2 2.115 3.23 5.125 4.529.716.31 1.274.494 1.71.632.721.229 1.375.197 1.892.12.576-.085 1.78-.727 2.03-1.43.25-.702.25-1.303.175-1.43-.075-.127-.275-.202-.576-.352z"></path>
+</svg>
+</a>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-deep-obsidian border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-desktop px-margin-desktop py-16 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-md text-headline-md text-antique-gold mb-4 uppercase">DUBAI FISTAN SARAYI</div>
+<p class="font-body-md text-on-surface-variant max-w-md">
+                    Geleneksel motifleri modern çizgilerle buluşturan butik atölyemizde, her kadının hayalindeki elbiseyi gerçeğe dönüştürüyoruz.
+                </p>
+<div class="flex gap-4 mt-8">
+<span class="material-symbols-outlined cursor-pointer hover:text-antique-gold transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-antique-gold transition-colors">share</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-antique-gold transition-colors">mail</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-antique-gold mb-6">Kurumsal</h4>
+<ul class="space-y-4">
+<li><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_10}}">Sözleşmeler</a></li>
+<li><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_10}}">KVKK</a></li>
+<li><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_10}}">Kargo Takip</a></li>
+<li><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors duration-300" href="{{DATA:SCREEN:SCREEN_10}}">Sıkça Sorulan Sorular</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-antique-gold mb-6">Haber Bülteni</h4>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-2 focus:ring-0 focus:border-antique-gold text-on-surface font-label-md text-sm transition-all" placeholder="E-POSTA ADRESİNİZ" type="email">
+<button class="absolute right-0 bottom-2 text-antique-gold">
+<span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-8 border-t border-outline-variant/10 text-center">
+<p class="font-label-md text-xs tracking-widest text-on-surface-variant/40">© 2024 DUBAI FISTAN SARAYI. TÜM HAKLARI SAKLIDIR.</p>
+</div>
+</footer>
+<script>
+        function openModal(id) {
+            document.getElementById('productModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on ESC
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // Interactive micro-interactions
+        document.querySelectorAll('.zoom-container').forEach(container => {
+            container.addEventListener('mousemove', (e) => {
+                const img = container.querySelector('.zoom-image');
+                const { left, top, width, height } = container.getBoundingClientRect();
+                const x = (e.clientX - left) / width * 100;
+                const y = (e.clientY - top) / height * 100;
+                img.style.transformOrigin = `${x}% ${y}%`;
+            });
+            
+            container.addEventListener('mouseleave', () => {
+                const img = container.querySelector('.zoom-image');
+                img.style.transformOrigin = 'center center';
+            });
+        });
+    </script>
+</body></html>
